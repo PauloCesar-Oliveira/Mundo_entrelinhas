@@ -369,6 +369,9 @@ div p {
     .recipe-container {
         flex-direction: column; /* Receitas ficam uma abaixo da outra */
     }
+    .slider-content img {
+        height: 300px;
+    }
 }
 
 /* Para celulares (até 480px) */
@@ -406,6 +409,10 @@ div p {
         .site-header h1 {
             font-size: 1.8rem;
         }
+    }
+
+    .slider-content img {
+        height: 230px;
     }
 
     /* ---- SEÇÃO DE CONTEÚDO PRINCIPAL (ATUALIZADO) ---- */
