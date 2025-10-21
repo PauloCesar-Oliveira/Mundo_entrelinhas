@@ -9,66 +9,59 @@
 }
 
 /* ---- CONFIGURAÇÕES GERAIS ---- */
-
-/* Rolagem suave */
 html {
     scroll-behavior: smooth;
 }
-
-/* Remove a barra de rolagem padrão do navegador. */
 ::-webkit-scrollbar {
     display: none;
 }
-
-/* Estilos aplicados ao corpo (body) da página. */
 body {
-    font-family: 'Akshar', sans-serif; /* Define a fonte principal da página. */
-    margin: 0; /* Remove a margem padrão. */
-    padding: 0; /* Remove o preenchimento padrão. */
-    background: linear-gradient( to right, #1e0036, #c19efd, #1e0036); /* Define um fundo com gradiente de cores. */
-    color: #333; /* Define a cor do texto padrão. */
-    overflow-x: hidden; /* Esconde qualquer conteúdo que transborde horizontalmente. */
-
+    font-family: 'Akshar', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient( to right, #1e0036, #dbc7fd, #1e0036);
+    color: #333;
+    overflow-x: hidden;
 }
 
-
 /* ---- CABEÇALHO (HEADER) ---- */
-
-/* Estilização do cabeçalho principal. */
 header {
-    background-color: #4A1859; /* Cor de fundo roxa. */
-    border-bottom-left-radius: 10px; /* Arredonda o canto inferior esquerdo. */
-    border-bottom-right-radius: 10px; /* Arredonda o canto inferior direito. */
-    color: rgb(255, 255, 255); /* Cor do texto. */
-    display: flex; /* Habilita o layout flexbox para alinhar os itens. */
-    align-items: center; /* Alinha os itens verticalmente ao centro. */
-    justify-content: space-between; /* Distribui o espaço entre os itens. */
-    border-bottom: solid 1.5px #ffa100; /* Adiciona uma borda laranja na parte inferior. */
-    height: 120px; /* Define a altura fixa do cabeçalho. */
-    text-shadow: #000000 2px 2px; /* Adiciona uma sombra ao texto. */
+    background-color: #4A1859;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1.5px #ffa100;
+    text-shadow: #000000 2px 2px;
+    /* --- CORREÇÃO --- */
+    /* height: 120px; FOI REMOVIDO */
+    padding: 15px 30px; /* Adiciona altura flexível */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Estilização da seção de links de navegação no cabeçalho. */
 .cabecalho {
-    color: #ffffff; /* Cor do texto. */
-    padding: 10px; /* Espaçamento interno. */
-    display: flex; /* Organiza os links em linha. */
-    align-items: center; /* Alinha os links verticalmente. */
-    justify-content: center; /* Alinha os links horizontalmente. */
-    font-size: 1.5em; /* Tamanho da fonte. */
-    font-weight: bold; /* Deixa o texto em negrito. */
-    margin-right: 50px; /* Margens para posicionamento. */
-    margin-left: 10px;
-    border-radius: 15px; /* Arredonda as bordas. */
-    margin: 250px;
-    gap: 80px; /* Espaço entre os links. */
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 15px;
+    gap: 80px;
+    /* --- CORREÇÃO --- */
+    margin: 0; /* REMOVIDO margin: 250px; e outras */
 }
 
 .dropdown{
     position: relative;
     display: inline-block;
 }
-
 .dropdown-btn{
     color: #fff;
     text-decoration: none;
@@ -76,7 +69,6 @@ header {
     font-weight: bold;
     cursor: pointer;
 }
-
 .dropdown-content{
     display: none;
     position: absolute;
@@ -86,180 +78,138 @@ header {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     z-index: 999;
 }
-
 .dropdown-content a{
     color: #fff;
     padding: 10px;
     text-decoration: none;
     display: block;
 }
-
 .dropdown-content a:hover{
     background-color: #aa78ff;
 }
-
 .show{
     display: block;
     animation: fadeIn 0.2 ease-in-out;
 }
-
 @keyframes fadeIn {
     from{ opacity: 0; transform: translateY(-5px);}
     to{ opacity: 1; transform: translateY(0);} 
 }
-/* Estilos para os links (<a>) dentro do cabeçalho. */
 header a {
-    color: white; /* Cor do texto. */
-    text-decoration: none; /* Adiciona sublinhado. */
+    color: white;
+    text-decoration: none;
 }
-
-/* Estilo para links já visitados. */
 header a:visited {
     color: rgb(255, 255, 255);
 }
-
-/* Efeito ao passar o mouse sobre os links. */
 header a:hover {
-    color: #ffbf51; /* Muda a cor do texto. */
-    transform: scale(1.1); /* Aumenta o tamanho do link. */
-    transition: 180ms ease-in; /* Define uma transição suave para o efeito. */
+    color: #ffbf51;
+    transform: scale(1.1);
+    transition: 180ms ease-in;
 }
-
-/* Estilo para o título principal (h1) no cabeçalho. */
 header h1 {
-    margin: 0; /* Remove margens. */
-    font-size: 2.5em; /* Tamanho da fonte. */
+    margin: 0;
+    font-size: 2.5em;
 }
 
-/* Container para alinhar o conteúdo do cabeçalho (logos e navegação). */
+/* Container para alinhar o conteúdo do cabeçalho */
 .header-content {
-    display: flex; /* Usa flexbox para alinhar os itens. */
-    align-items: center; /* Alinha verticalmente ao centro. */
-    justify-content: space-evenly; /* Distribui o espaço igualmente. */
-    gap: 10px; /* Espaço entre os elementos. */
-    text-align: center; /* Centraliza o texto. */
-    margin: 0 auto; /* Centraliza o container na página. */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    /* --- CORREÇÃO --- */
+    justify-content: space-between; /* Alinha melhor os itens */
+    gap: 20px; /* Espaço flexível */
+    max-width: 1400px; /* Limita a largura em telas grandes */
+    width: 100%;
 }
 
-/* Estilização das imagens de logo no cabeçalho. */
 .logo {
-    max-height: 100%; /* Garante que a logo não exceda a altura do header. */
-    height: 100px; /* Altura da logo. */
-    width: auto; /* Mantém a proporção da imagem. */
+    max-height: 100%;
+    height: 100px;
+    width: auto;
+    flex-shrink: 0; /* Impede que o logo encolha */
 }
-
 
 /* ---- CARROSSEL DE IMAGENS (SLIDER) ---- */
-
-/* Define o contêiner principal do carrossel. */
 .slider-content {
-    width: 400%; /* Largura total para comportar todos os slides lado a lado. */
-    margin-top: 5px; /* Margem no topo. */
-    height: auto; /* Altura automática. */
-    display: flex; /* Alinha os slides horizontalmente. */
+    width: 400%;
+    margin-top: 5px;
+    height: auto;
+    display: flex;
 }
-
-/* Esconde os botões de rádio (usados para controlar o slide) e as imagens para mobile por padrão. */
 .slider-content input, .img-mobile {
     display: none;
 }
-
-/* Estilização de cada caixa de slide individual. */
 .slide-box {
-    width: 25%; /* Cada slide ocupa 25% da largura do .slider-content. */
+    width: 25%;
     height: auto;
-    position: relative; /* Necessário para posicionar os botões de navegação. */
-    transition: 1s; /* Animação suave na troca de slides. */
+    position: relative;
+    transition: 1s;
 }
-
-/* Estilização das imagens dentro do carrossel. */
 .slide-box img {
-    width: 100%; /* Imagem ocupa toda a largura da .slide-box. */
-    height: 500px; /* Altura fixa para as imagens. */
-    border: 1.5px solid #ffa100; /* Borda laranja. */
+    width: 100%;
+    height: 500px;
+    border: 1.5px solid #ffa100;
 }
-
-/* Posicionamento dos botões de navegação (manual e automático). */
 .nav-manual, .nav-auto {
-    position: absolute; /* Permite posicionar sobre as imagens. */
+    position: absolute;
     width: 100%;
     margin-top: 28%;
     margin-left: 45%;
     display: flex;
     float: center;
 }
-
-/* Estilização dos botões (bolinhas). */
 .nav-manual .manual-btn, .nav-auto div {
-    border: 2px solid #ffa100; /* Borda laranja. */
-    padding: 10px; /* Espaçamento interno para criar o formato de bolinha. */
-    border-radius: 50%; /* Deixa o elemento redondo. */
-    cursor: pointer; /* Muda o cursor para uma mão. */
-    transition: 0.2s; /* Transição suave. */
+    border: 2px solid #ffa100;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
     margin-top: -32px;
 }
-
-/* Espaçamento entre os botões. */
 .nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
     margin-right: 10px;
 }
-
-/* Efeito ao passar o mouse sobre o botão manual. */
 .nav-manual .manual-btn:hover {
     background-color: #ffa100;
 }
-
-/* Lógica de controle do Carrossel */
-/* Quando o primeiro radio button está selecionado, a bolinha automática correspondente fica roxa. */
 #radio1:checked ~ .nav-auto .auto-btn1,
 #radio2:checked ~ .nav-auto .auto-btn2,
 #radio3:checked ~ .nav-auto .auto-btn3 {
     background-color: #b039d4;
 }
-
-/* Move o conjunto de slides para a esquerda com base no botão de rádio selecionado. */
 #radio1:checked ~ .primeiro {
-    margin-left: 0%; /* Mostra o primeiro slide. */
+    margin-left: 0%;
 }
-
 #radio2:checked ~ .primeiro {
-    margin-left: -25%; /* Desloca para mostrar o segundo slide. */
+    margin-left: -25%;
 }
-
 #radio3:checked ~ .primeiro {
-    margin-left: -50%; /* Desloca para mostrar o terceiro slide. */
+    margin-left: -50%;
 }
-
 
 /* ---- SEÇÃO DE CONTEÚDO PRINCIPAL ---- */
-
-/* Estilização do container de texto "Bem-vindo". */
 .fundo {
-    color: rgb(255, 255, 255); /* Cor do texto. */
-    font-weight: bold; /* Texto em negrito. */
-    font-size: 25px; /* Tamanho da fonte. */
-    margin-top: 35px; /* Margem superior. */
-    margin-left: 60px; /* Margens laterais. */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 35px;
+    margin-left: 60px;
     margin-right: 60px;
-    border: 5px double #ffa100; /* Borda dupla laranja. */
+    border: 5px double #ffa100;
     display: flex;
     flex-direction: column;
-    background-color: #4a1859; /* Cor de fundo roxa. */
-    border-radius: 10px; /* Bordas arredondadas. */
+    background-color: #4a1859;
+    border-radius: 10px;
 }
-
-/* Estilização do parágrafo dentro da seção "fundo". */
 div p {
-    margin-top: 10px; /* Margem no topo do texto. */
-    text-align: justify; /* Alinhamento justificado. */
-    padding: 15px; /* Espaçamento interno. */
-    text-shadow: #000000 1.5px 1.5px; /* Sombra no texto. */
+    margin-top: 10px;
+    text-align: justify;
+    padding: 15px;
+    text-shadow: #000000 1.5px 1.5px;
 }
-
-/* ---- ESTILOS DE LIVROS (Não utilizados na página principal, mas definidos) ---- */
-/* Os estilos abaixo parecem ser para uma seção de livros que não está no HTML fornecido, mas estão prontos para uso. */
-
-/* Estilo do container de cada livro. */
 .book {
     display: flex;
     align-items: flex-start;
@@ -271,28 +221,20 @@ div p {
     margin-top: 40px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* Estilo da imagem (capa) do livro. */
 .book img {
     width: 150px;
     height: auto;
     margin-right: 20px;
     border-radius: 8px;
-    transition: 500ms linear; /* Efeito de transição suave. */
+    transition: 500ms linear;
 }
-
-/* Efeito de sombra ao passar o mouse sobre a capa do livro. */
 .book img:hover {
     top: 1px;
     box-shadow: 5px 5px 5px #FFA100;
 }
-
-/* Container para o conteúdo textual do livro (título, descrição, etc.). */
 .book-content {
-    flex: 1; /* Permite que este container ocupe o espaço restante. */
+    flex: 1;
 }
-
-/* Estilo do título do livro. */
 .book-title {
     font-size: 1.5em;
     margin-bottom: 10px;
@@ -340,118 +282,92 @@ div p {
     visibility: visible;
 }
 
-/* RESPONSIVIDADE */
-/* @media aplica estilos apenas quando a condição (tamanho da tela) é atendida. */
-
-/* Para tablets e telas menores (até 768px) */
-@media (max-width: 1024px) {
-
-     body{
-    overflow-x: hidden;
-  }
-
-    .header-content {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .cabecalho {
-        margin: 0;
-        gap: 40px;
-        font-size: 1.2em;
-        flex-wrap: wrap;
-    }
-    
-
-    .main-nav ul {
-        flex-direction: column; /* Menu vira uma coluna */
-        gap: 10px;
-    }
-
-    .banner h2 {
-        font-size: 2.5rem;
-    }
-
-    .recipe-container {
-        flex-direction: column; /* Receitas ficam uma abaixo da outra */
-    }
-    .slider-content img {
-        height: 300px;
-    }
+/* ---- ESTILOS DA PÁGINA "QUEM SOMOS" ---- */
+.about-section {
+    background-color: var(--cor-branco);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    margin-top: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.story-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.story-content img {
+    max-width: 300px;
+    border-radius: 10px;
+    border: 3px solid var(--cor-secundaria);
+}
+.story-text h3 {
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulos);
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+.story-text p {
+    line-height: 1.7;
+    text-align: justify;
+    color: #333;
+}
+.team-section {
+    padding: 2rem 0;
+}
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.team-member-card {
+    background-color: var(--cor-branco);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-top: 5px solid var(--cor-principal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor-secundaria);
+    margin-bottom: 1rem;
+}
+.member-info h3 {
+    color: var(--cor-principal);
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+}
+.member-info h4 {
+    color: var(--cor-secundaria);
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.member-info p, .member-info ul {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+    text-align: left;
+    padding-left: 20px;
+    text-shadow: none;
+}
+.member-info ul {
+    padding-left: 30px; /* Alinha melhor a lista */
 }
 
-/* Para celulares (até 480px) */
-@media (max-width: 480px) {
-
-    header {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 15px;
-    }
-    .cabecalho {
-        flex-direction: column;
-        margin: 0;
-        gap: 20px;
-        font-size: 1.1em;
-        text-align: center;
-    }
-
-    body {
-        font-size: 16px;
-        overflow-x: hidden;
-    }
-
-    .site-header {
-        padding: 1rem;
-    }
-
-    main {
-        padding: 1rem;
-    }
-
-    .content-section {
-        padding: 1.5rem;
-    }
-
-        .site-header h1 {
-            font-size: 1.8rem;
-        }
-        .slider-content img {
-        height: 230px;
-    }
-    }
-
-    
-    /* ---- SEÇÃO DE CONTEÚDO PRINCIPAL (ATUALIZADO) ---- */
-
-    @media (max-width: 480px){
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    body {
-        font-size: 16px;
-        overflow-x: hidden;
-    }
-    
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .cabecalho {
-        flex-direction: column;
-        font-size: 1em;
-        gap: 15px;
-        margin: 0;
-    }
-    .logo {
-        height: 70px;}
-
+/* ---- ESTILOS DA PÁGINA INICIAL (FORMULÁRIO, ETC) ---- */
 .container {
     padding: 20px 60px;
-}}
-
+}
 .section-title {
     color: var(--cor-principal);
     text-align: center;
@@ -459,7 +375,6 @@ div p {
     margin-bottom: 20px;
     text-shadow: 1px 1px var(--cor-secundaria);
 }
-
 .section-subtitle {
     text-align: center;
     color: #333;
@@ -470,89 +385,68 @@ div p {
     margin-left: auto;
     margin-right: auto;
 }
-
-/* ---- SEÇÃO "COMO FUNCIONA" (LAYOUT CORRIGIDO E REFINADO) ---- */
 .how-it-works {
     background-color: rgba(255, 255, 255, 0.85);
-    padding: 40px 50px; /* Aumenta o espaçamento interno geral */
+    padding: 40px 50px;
     border-radius: 15px;
+    margin-top: 35px; /* Adiciona margem no topo */
     margin-bottom: 40px;
     border: 2px solid var(--cor-secundaria);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .how-it-works .section-title {
     margin-bottom: 10px;
 }
-
 .how-it-works .section-subtitle {
-    margin-bottom: 50px; /* Mais espaço entre o subtítulo e os cards */
+    margin-bottom: 50px;
 }
-
-/* O container que alinha os 4 passos */
 .steps-container {
     display: flex;
-    /* PONTO CRÍTICO: Alinha todos os cards no topo, resolvendo o desalinhamento vertical */
     align-items: flex-start;
     justify-content: space-between;
-    gap: 40px; /* Aumenta o espaço entre os cards para um melhor respiro */
+    gap: 40px;
 }
-
-/* Estilo de cada card de passo */
 .step {
-    flex: 1; /* Garante que os cards dividam o espaço igualmente */
-    /* PONTO CRÍTICO: Centraliza todo o conteúdo (título, texto, imagem) para um visual limpo */
+    flex: 1;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .step h3 {
     color: var(--cor-principal);
     font-size: 1.6em;
     margin-bottom: 15px;
-    /* Garante que os títulos fiquem bem alinhados mesmo se tiverem tamanhos diferentes */
     min-height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-/* Estilo do texto descritivo */
 .step p {
     font-size: 1.1em;
     line-height: 1.6;
     color: #333;
     text-shadow: none;
-    /* Força o alinhamento centralizado para um bloco de texto mais coeso */
     text-align: center;
 }
-
-/* Estilo para a imagem que você adicionou */
 .step img {
-    max-width: 100%; /* A imagem se ajustará à largura do card */
+    max-width: 100%;
     height: auto;
-    margin-top: 20px; /* Adiciona um espaço consistente acima da imagem */
+    margin-top: 20px;
 }
-
-/* Seção de Formulário de Contato */
 .contact-section {
     background-color: var(--cor-principal);
     padding: 40px;
     border-radius: 15px;
     border: 2px solid var(--cor-secundaria);
 }
-
 .contact-section .section-title {
     color: var(--cor-branco);
     text-shadow: 1px 1px #000;
 }
-
 .contact-section .section-subtitle {
     color: #dbc7fd;
 }
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -560,13 +454,11 @@ div p {
     max-width: 700px;
     margin: 0 auto;
 }
-
 .contact-form label {
     color: var(--cor-branco);
     font-weight: bold;
     font-size: 1.1em;
 }
-
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -576,16 +468,14 @@ div p {
     font-family: 'Akshar', sans-serif;
     font-size: 1em;
     transition: border-color 0.3s, box-shadow 0.3s;
-    box-sizing: border-box; /* Garante que padding não afete a largura total */
+    box-sizing: border-box;
 }
-
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--cor-secundaria);
     box-shadow: 0 0 8px rgba(255, 161, 0, 0.5);
 }
-
 .submit-btn {
     background-color: var(--cor-secundaria);
     color: var(--cor-principal);
@@ -598,36 +488,12 @@ div p {
     transition: background-color 0.3s, transform 0.2s;
     margin-top: 10px;
 }
-
 .submit-btn:hover {
-    background-color: #ffb940; /* Um tom mais claro do laranja */
+    background-color: #ffb940;
     transform: translateY(-3px);
 }
-
-
-/* ---- AJUSTES DE RESPONSIVIDADE ---- */
-
-/* Atualize suas media queries existentes com estas regras */
-
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    .steps-container {
-        flex-direction: column; /* Coloca os passos um abaixo do outro em telas menores */
-    }
-
-    body {
-        font-size: 16px;
-        overflow-x: hidden;
-    }
-}
-
-/* ---- ESTILO DA MENSAGEM DE SUCESSO DO FORMULÁRIO ---- */
-
 #success-message {
-    display: none; /* A mensagem começa escondida */
+    display: none;
     padding: 30px;
     background-color: var(--cor-secundaria);
     border-radius: 8px;
@@ -635,19 +501,94 @@ div p {
     color: var(--cor-principal);
     animation: fadeIn 0.5s ease-in-out;
 }
-
 #success-message h3 {
     margin: 0 0 10px 0;
     font-size: 1.8em;
 }
-
 #success-message p {
     margin: 0;
     font-size: 1.2em;
     text-shadow: none;
 }
-
-/* Classe que o JavaScript vai adicionar para mostrar a mensagem */
 .show-message {
-    display: block !important; /* O !important garante que a regra seja aplicada */
+    display: block !important;
+}
+
+/* ---- RESPONSIVIDADE GERAL ---- */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px 30px;
+    }
+    .fundo {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px; /* Adiciona padding no modo mobile */
+    }
+    header {
+        height: auto; /* Altura automática no mobile */
+        padding: 0; /* Remove padding do header, pois o content tem */
+    }
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+        margin: 0;
+        font-size: 1.2em;
+    }
+    .logo {
+        height: 80px;
+    }
+    .steps-container {
+        flex-direction: column;
+    }
+    .story-content {
+        flex-direction: column;
+    }
+    .slider-content img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        padding: 15px;
+    }
+    .fundo {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    .cabecalho {
+        font-size: 1.1em;
+    }
+    .logo {
+        height: 70px;
+    }
+    .slider-content img {
+        height: 230px;
+    }
+    #back-to-top-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        line-height: 38px;
+    }
+    .step h3 {
+        font-size: 1.4em;
+    }
+    .step p {
+        font-size: 1em;
+    }
 }

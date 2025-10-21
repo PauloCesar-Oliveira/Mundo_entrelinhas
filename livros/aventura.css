@@ -548,3 +548,6 @@ html {
     }
 }
 
+:-ms-input-placeholder::placeholder{
+    color:#004faa;
+}
