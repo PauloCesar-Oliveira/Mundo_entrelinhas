@@ -345,6 +345,11 @@ div p {
 
 /* Para tablets e telas menores (até 768px) */
 @media (max-width: 1024px) {
+
+     body{
+    overflow-x: hidden;
+  }
+
     .header-content {
         flex-direction: column;
         gap: 15px;
@@ -392,6 +397,7 @@ div p {
 
     body {
         font-size: 16px;
+        overflow-x: hidden;
     }
 
     .site-header {
@@ -422,6 +428,12 @@ div p {
         flex-direction: column;
         text-align: center;
     }
+
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+    
     .header-content {
         flex-direction: column;
         align-items: center;
@@ -604,6 +616,11 @@ div p {
 
     .steps-container {
         flex-direction: column; /* Coloca os passos um abaixo do outro em telas menores */
+    }
+
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
     }
 }
 
