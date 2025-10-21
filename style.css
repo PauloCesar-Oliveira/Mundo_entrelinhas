@@ -344,15 +344,18 @@ div p {
 /* @media aplica estilos apenas quando a condição (tamanho da tela) é atendida. */
 
 /* Para tablets e telas menores (até 768px) */
-@media (max-width: 768px) {
-    .site-header h1 {
-        font-size: 2rem;
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .cabecalho {
+        margin: 0;
+        gap: 40px;
+        font-size: 1.2em;
+        flex-wrap: wrap;
     }
     
-    .header-content {
-        flex-direction: column; /* Coloca o logo acima do texto */
-        gap: 10px;
-    }
 
     .main-nav ul {
         flex-direction: column; /* Menu vira uma coluna */
@@ -370,6 +373,20 @@ div p {
 
 /* Para celulares (até 480px) */
 @media (max-width: 480px) {
+
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+    .cabecalho {
+        flex-direction: column;
+        margin: 0;
+        gap: 20px;
+        font-size: 1.1em;
+        text-align: center;
+    }
+
     body {
         font-size: 16px;
     }
@@ -392,9 +409,29 @@ div p {
     }
 
     /* ---- SEÇÃO DE CONTEÚDO PRINCIPAL (ATUALIZADO) ---- */
+
+    @media (max-width: 480px){
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .cabecalho {
+        flex-direction: column;
+        font-size: 1em;
+        gap: 15px;
+        margin: 0;
+    }
+    .logo {
+        height: 70px;}
+
 .container {
     padding: 20px 60px;
-}
+}}
 
 .section-title {
     color: var(--cor-principal);
