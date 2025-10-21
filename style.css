@@ -45,7 +45,7 @@ header {
     justify-content: space-between; /* Distribui o espaço entre os itens. */
     border-bottom: solid 1.5px #ffa100; /* Adiciona uma borda laranja na parte inferior. */
     height: 120px; /* Define a altura fixa do cabeçalho. */
-    text-shadow: #d12f2f 2px 2px; /* Adiciona uma sombra ao texto. */
+    text-shadow: #000000 2px 2px; /* Adiciona uma sombra ao texto. */
 }
 
 /* Estilização da seção de links de navegação no cabeçalho. */
