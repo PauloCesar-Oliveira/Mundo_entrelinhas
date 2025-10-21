@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Entre Linhas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png">  <!--FAVICON-->
+
+</head>
+<body>
+
+
+    <header>
+        <div class="header-content">
+            <img src="img/logo.png" alt="logoheader" class="logo">
+          <div class="cabecalho">
+              <a href="">Início</a>
+              <a href="livros/index.html">Gêneros</a>
+              <a href="quem_somos/index.html">Quem somos</a>
+          </div>
+          <img src="img/sistema_solar.webp" alt="logoheader" class="logo">
+        </div>
+    </header>
+
+    <!-- Slider -->
+    <section class="slider" id="inicio">
+        <div class="slider-content">
+          <input type="radio" name="btn-radio" id="radio1">
+          <input type="radio" name="btn-radio" id="radio2">
+          <input type="radio" name="btn-radio" id="radio3">
+   
+          <div class="slide-box primeiro">
+            <img class="img-desktop" src="img/Carrossel 1.png" alt="slide 1">
+            <img class="img-mobile" src="img/Carrossel 1.jpeg" alt="slide 1">
+          </div>
+   
+          <div class="slide-box">
+            <img class="img-desktop" src="img/Carrossel 2.jpeg" alt="slide 2">
+            <img class="img-mobile" src="img/Carrossel 2.jpeg" alt="slide 2">
+          </div>
+
+
+          <div class="slide-box">
+            <img class="img-desktop" src="img/Carrossel.jpeg" alt="slide 3">
+            <img class="img-mobile" src="img/Carrossel.jpeg" alt="slide 3">
+          </div>
+   
+          <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+   
+          <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+
+    <div class="fundo">
+      <p>
+        Bem-vindo ao nosso blog de livros!
+Aqui você encontra uma experiência simples e prática para descobrir novos mundos através da leitura.<br><br>
+
+👉 Clique em “Gêneros” para explorar categorias como Romance, Aventura, HQs, Terror e muito mais.<br>
+
+📖 Veja os livros em destaque na nossa página inicial e conheça nossas recomendações especiais.<br>
+
+🙋‍♀️ Na seção “Quem Somos” você descobre um pouco mais sobre nossa história e propósito.<br>
+
+🔎 Use a busca para encontrar rapidamente o título ou autor que deseja.<br>
+
+❤️ Adicione aos favoritos os livros que mais chamarem sua atenção para não perder nada.<br><br>
+
+Nosso catálogo conta com diferentes estilos:<br><br>
+✨ Histórias românticas cheias de emoção.<br>
+👻 Narrativas de terror para arrepiar.<br>
+🦸 Aventuras e HQs para quem ama ação e heróis.<br>
+🌍 Obras que transportam você para novos universos.<br>
+      </p>
+    </div>
+    </div>
+
+ <footer class="site-footer">
+        <p>© 2025 Mundo Entre Linhas. Todos os direitos reservados.</p>
+        <p>Criado com paixão por literatura.</p>
+   </footer>
+
+    <a href="#inicio" id="back-to-top-btn" title="Voltar ao topo">&uarr;</a>
+
+    <script>
+        // Pega o botão do HTML
+        const backToTopButton = document.getElementById("back-to-top-btn");
+
+        // Função que será executada quando o usuário rolar a página
+        const scrollFunction = () => {
+            // Se o usuário rolar mais de 300 pixels para baixo
+            if (window.scrollY > 300) {
+                // Adiciona a classe 'show' para mostrar o botão
+                backToTopButton.classList.add("show");
+            } else {
+                // Remove a classe 'show' para esconder o botão
+                backToTopButton.classList.remove("show");
+            }
+        };
+
+        // Adiciona um "ouvinte" que chama a função sempre que a página for rolada
+        window.addEventListener("scroll", scrollFunction);
+    </script>
+
+</body>
+</html>

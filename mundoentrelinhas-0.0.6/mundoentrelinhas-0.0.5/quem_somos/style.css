@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Geist+Mono:wght@100..900&display=swap');
+
+body {
+    font-family: 'Akshar', sans-serif; /* Define a fonte principal da página. */
+    margin: 0; /* Remove a margem padrão. */
+    padding: 0; /* Remove o preenchimento padrão. */
+    background-image: url(fundoroxo.jpg); /* Define um fundo com gradiente de cores. */
+    color: #333; /* Define a cor do texto padrão. */
+    overflow-x: hidden; /* Esconde qualquer conteúdo que transborde horizontalmente. */
+}
+.caixa{
+    margin: 400px;
+    padding: 200px;
+    backdrop-filter: blur(3px);
+    border-radius: 15px;
+    color: white;
+}
