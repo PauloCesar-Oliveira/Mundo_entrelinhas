@@ -415,6 +415,9 @@ html {
 
 /* Tablets */
 @media (max-width: 1024px) {
+    body{
+        align-items: center;
+    }
     .header-content {
         flex-direction: column;
         gap: 15px;
