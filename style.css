@@ -340,256 +340,253 @@ div p {
     visibility: visible;
 }
 
-/* === RESET BÁSICO === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* RESPONSIVIDADE */
+/* @media aplica estilos apenas quando a condição (tamanho da tela) é atendida. */
+
+/* Para tablets e telas menores (até 768px) */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 2rem;
+    }
+    
+    .header-content {
+        flex-direction: column; /* Coloca o logo acima do texto */
+        gap: 10px;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Menu vira uma coluna */
+        gap: 10px;
+    }
+
+    .banner h2 {
+        font-size: 2.5rem;
+    }
+
+    .recipe-container {
+        flex-direction: column; /* Receitas ficam uma abaixo da outra */
+    }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-}
+/* Para celulares (até 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
 
-/* === HEADER === */
-header {
-    background-color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    .site-header {
+        padding: 1rem;
+    }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+    main {
+        padding: 1rem;
+    }
 
-.logo {
-    max-width: 120px;
-    height: auto;
-}
+    .content-section {
+        padding: 1.5rem;
+    }
 
-.cabecalho {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+        .site-header h1 {
+            font-size: 1.8rem;
+        }
+    }
 
-.cabecalho a {
-    text-decoration: none;
-    color: #333;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.cabecalho a:hover {
-    background-color: #ddd;
-}
-
-/* === DROPDOWN === */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 150px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 1000;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 8px 12px;
-    color: #333;
-}
-
-.dropdown-content a:hover {
-    background-color: #eee;
-}
-
-.show {
-    display: block;
-}
-
-/* === SLIDER === */
-.slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.slide-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Esconde imagens mobile por padrão */
-.img-mobile {
-    display: none;
-}
-
-/* === CONTAINER PRINCIPAL === */
+    /* ---- SEÇÃO DE CONTEÚDO PRINCIPAL (ATUALIZADO) ---- */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 20px 60px;
 }
 
-/* === SEÇÕES === */
 .section-title {
+    color: var(--cor-principal);
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px var(--cor-secundaria);
 }
 
 .section-subtitle {
     text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #555;
+    color: #333;
+    font-size: 1.2em;
+    margin-top: -15px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* === STEPS === */
+/* ---- SEÇÃO "COMO FUNCIONA" (LAYOUT CORRIGIDO E REFINADO) ---- */
+.how-it-works {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px 50px; /* Aumenta o espaçamento interno geral */
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border: 2px solid var(--cor-secundaria);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.how-it-works .section-title {
+    margin-bottom: 10px;
+}
+
+.how-it-works .section-subtitle {
+    margin-bottom: 50px; /* Mais espaço entre o subtítulo e os cards */
+}
+
+/* O container que alinha os 4 passos */
 .steps-container {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    /* PONTO CRÍTICO: Alinha todos os cards no topo, resolvendo o desalinhamento vertical */
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px; /* Aumenta o espaço entre os cards para um melhor respiro */
+}
+
+/* Estilo de cada card de passo */
+.step {
+    flex: 1; /* Garante que os cards dividam o espaço igualmente */
+    /* PONTO CRÍTICO: Centraliza todo o conteúdo (título, texto, imagem) para um visual limpo */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step h3 {
+    color: var(--cor-principal);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    /* Garante que os títulos fiquem bem alinhados mesmo se tiverem tamanhos diferentes */
+    min-height: 55px;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.step {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    flex: 1 1 250px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* Estilo do texto descritivo */
+.step p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    text-shadow: none;
+    /* Força o alinhamento centralizado para um bloco de texto mais coeso */
+    text-align: center;
 }
 
+/* Estilo para a imagem que você adicionou */
 .step img {
-    width: 100%;
+    max-width: 100%; /* A imagem se ajustará à largura do card */
     height: auto;
-    margin-top: 10px;
-    border-radius: 5px;
+    margin-top: 20px; /* Adiciona um espaço consistente acima da imagem */
 }
 
-/* === FORMULÁRIO === */
+/* Seção de Formulário de Contato */
+.contact-section {
+    background-color: var(--cor-principal);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--cor-secundaria);
+}
+
+.contact-section .section-title {
+    color: var(--cor-branco);
+    text-shadow: 1px 1px #000;
+}
+
+.contact-section .section-subtitle {
+    color: #dbc7fd;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
+}
+
+.contact-form label {
+    color: var(--cor-branco);
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
     width: 100%;
-    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-family: 'Akshar', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 8px rgba(255, 161, 0, 0.5);
 }
 
 .submit-btn {
-    padding: 12px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    padding: 15px;
     border: none;
-    background-color: #333;
-    color: #fff;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
 }
 
 .submit-btn:hover {
-    background-color: #555;
+    background-color: #ffb940; /* Um tom mais claro do laranja */
+    transform: translateY(-3px);
 }
 
-/* === FOOTER === */
-.site-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 10px;
-    margin-top: 40px;
-}
 
-#back-to-top-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 50%;
-    text-decoration: none;
-    display: none;
-    font-size: 1.2rem;
-}
+/* ---- AJUSTES DE RESPONSIVIDADE ---- */
 
-/* === MEDIA QUERIES === */
-@media (max-width: 1024px) {
-    .header-content {
-        justify-content: center;
-        gap: 10px;
+/* Atualize suas media queries existentes com estas regras */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
     }
 
     .steps-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Coloca os passos um abaixo do outro em telas menores */
     }
 }
 
-@media (max-width: 768px) {
-    .cabecalho {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+/* ---- ESTILO DA MENSAGEM DE SUCESSO DO FORMULÁRIO ---- */
 
-    /* Mostrar imagens mobile no slider */
-    .img-desktop {
-        display: none;
-    }
-    .img-mobile {
-        display: block;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .section-subtitle {
-        font-size: 1rem;
-    }
-
-    .step {
-        flex: 1 1 100%;
-    }
+#success-message {
+    display: none; /* A mensagem começa escondida */
+    padding: 30px;
+    background-color: var(--cor-secundaria);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--cor-principal);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-@media (max-width: 480px) {
-    .logo {
-        max-width: 80px;
-    }
+#success-message h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+}
 
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 0.9rem;
-    }
+#success-message p {
+    margin: 0;
+    font-size: 1.2em;
+    text-shadow: none;
+}
 
-    .submit-btn {
-        font-size: 0.9rem;
-    }
+/* Classe que o JavaScript vai adicionar para mostrar a mensagem */
+.show-message {
+    display: block !important; /* O !important garante que a regra seja aplicada */
 }
