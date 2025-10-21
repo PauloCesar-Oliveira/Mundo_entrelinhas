@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Entre Linhas</title>
+    <link rel="stylesheet" href="aventura.css">
+    <link rel="icon" href="../img/favicon.png">  <!--FAVICON-->
+</head>
+<body>
+
+
+    <header>
+        <div class="header-content">
+            <img src="../img/favicon.png" alt="logoheader" class="logo">
+          <div class="cabecalho">
+              <a href="../index.html">Início</a>
+              <div class="dropdown">
+                <a href="#" class="dropdown-btn">Gêneros</a>
+                <div class="dropdown-content">
+                    <a href="../livros/romance.html">Romance</a>
+                    <a href="../livros/macabro.html">Terror</a>
+                    <a href="../livros/aventura.html">HQS</a>
+                </div>
+              </div>
+              <a href="../quem_somos/quem-somos.html">Quem somos</a>
+          </div>
+        </div>
+    </header>
+
+
+    <!-- Slider -->
+    <section class="slider">
+        <div class="slider-content">
+          <input type="radio" name="btn-radio" id="radio1">
+          <input type="radio" name="btn-radio" id="radio2">
+          <input type="radio" name="btn-radio" id="radio3">
+   
+          <div class="slide-box primeiro">
+            <img class="img-desktop" src="../img/Carrossel HQ 1.jpg" alt="slide 1">
+            <img class="img-mobile" src="../img/Carrossel HQ 1.jpg" alt="slide 1">
+          </div>
+   
+          <div class="slide-box">
+            <img class="img-desktop" src="../img/Carrossel HQ 2.jpg" alt="slide 2">
+            <img class="img-mobile" src="../img/Carrossel HQ 2.jpg" alt="slide 2">
+          </div>
+
+
+          <div class="slide-box">
+            <img class="img-desktop" src="../img/Carrossel  HQ 3.png" alt="slide 3">
+            <img class="img-mobile" src="../img/Carrossel  HQ 3.png" alt="slide 3">
+          </div>
+   
+          <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+   
+          <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+        </div>
+    </section>
+
+    <!-- Barra de pesquisa -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder=" Pesquise um livro..." />
+  </div>
+
+
+    <div class="container">
+
+
+<!-- Primeiro livro -->
+<div class="book">
+    <a href="https://www.amazon.com.br/Os-Fabulosos-X-Men-Vol-Definitiva/dp/6525930731/ref=asc_df_6525930731?mcid=86a75f52c22530168a9a9c8642b1a317&tag=googleshopp00-20&linkCode=df0&hvadid=709883381713&hvpos=&hvnetw=g&hvrand=16621628964108951536&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9100421&hvtargid=pla-2596522753392&psc=1&language=pt_BR&gad_source=1"><img src="../img/x-men.jpg" alt="Capa do livro X-men"></a>
+    <div class="book-content">
+        <h2 class="book-title">X-Men</h2>
+        <p class="book-description">
+            <h4>SINOPSE:</h4>
+            Para salvar o Anjo, que desapareceu, os X-Men acabam nos esgotos e são capturados pelos Morlocks, um bando de mutantes que vivem no subterrâneo. Ororo terá duelar com sua líder, Callisto, para salvar a si e seus companheiros, e isso desperta nela atitudes mais radicais e violentas. Na Mansão X, a vilã Vampira pede ajuda a Charles Xavier e torna-se uma membro temporária da equipe, mas acaba enfrentando a fúria de Carol Danvers, agora a poderosa Binária! Enquanto isso, no Japão, Wolverine decide não esconder mais seus sentimentos e quer se casar com Mariko Yashida, mas tem de enfrentar a seita de assassinos mais perigosos do planeta: 
+            <span class="extra-content"> </span>
+            <div id="aparecer" style="display: none;">Tentáculo! Os X-Men viajam até a terra do Sol Nascente para participar da cerimônia de casamento entre Logan e Mariko, mas uma surpresa inesperada poderá arruinar a felicidade do casal.</div>
+
+        </p>
+        <button class="read-more" onclick='minhafuncao()'>Ler mais</button>
+        <div class="rating-container">
+          <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+            <button class="star" data-value="1" aria-label="1 estrela">★</button>
+            <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+            <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+            <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+            <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+          </div>
+          <p class="rating-text">
+            Média: <span class="average-rating">0.0</span> de 5 
+            (<span class="total-ratings">0</span> avaliações)
+          </p>
+        </div>
+    </div>
+</div>
+   
+        <!-- Segundo livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Walking-Dead-Dias-Passados/dp/9895591977"><img src="../img/thewalkingdead.jpg" alt="Capa do livro The walking dead"></a>
+            <div class="book-content">
+                <h2 class="book-title">The Walking Dead - Dias passados</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                   O mundo que conhecíamos se foi. O mundo do comércio e da necessidade frívola foi substituído por um mundo de sobrevivência e responsabilidade. Uma epidemia de proporções apocalípticas varreu o globo, fazendo com que os mortos ressuscitassem e se alimentassem dos vivos. 
+                    <div id="aparecer2" style="display: none;" > MEm questão de meses, a sociedade ruiu: sem governo, sem supermercados, sem entrega de correspondências, sem TV a cabo. Em um mundo governado pelos mortos, os sobreviventes são forçados a finalmente começar a viver.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao2()'>Ler mais</button>
+                <div class="rating-container">
+          <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+            <button class="star" data-value="1" aria-label="1 estrela">★</button>
+            <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+            <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+            <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+            <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+          </div>
+          <p class="rating-text">
+            Média: <span class="average-rating">0.0</span> de 5 
+            (<span class="total-ratings">0</span> avaliações)
+          </p>
+        </div>
+            </div>
+        </div>
+   
+        <!-- Terceiro livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Absolute-Sandman-1-Neil-Gaiman/dp/8573516534/ref=asc_df_8573516534?mcid=da3732c0235834dfbbcea71e6ddd69bb&tag=googleshopp00-20&linkCode=df0&hvadid=709883381713&hvpos=&hvnetw=g&hvrand=13776650684997444413&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9100421&hvtargid=pla-811057540043&psc=1&language=pt_BR&gad_source=1"><img src="../img/sandman.jpg" alt="Capa do livro Sandman"></a>
+            <div class="book-content">
+                <h2 class="book-title">Sandman - Volume 1 </h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    “Vou revelar-te o que é o medo num punhado de pó.” Foi essa frase de T.S. Eliot que serviu para embalar o lançamento dessa série e também dar asas a imaginação de Neil Gaiman, um britânico destinado a criar uma das séries mais revolucionárias e inovadoras dos quadrinhos contemporâneos.  
+                    <div id="aparecer3" style="display: none;">Poucas HQs na história do mundo ocidental transcenderam o gênero e romperam barreiras como Sandman conseguiu. Mesclando mitologias modernas e fantasia sombria, além de acrescentar elementos modernos, históricos e míticos, Sandman foi considerada uma das séries mais artisticamente ambiciosas dos quadrinhos.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao3()'>Ler mais</button>
+                <div class="rating-container">
+          <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+            <button class="star" data-value="1" aria-label="1 estrela">★</button>
+            <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+            <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+            <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+            <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+          </div>
+          <p class="rating-text">
+            Média: <span class="average-rating">0.0</span> de 5 
+            (<span class="total-ratings">0</span> avaliações)
+          </p>
+        </div>
+            </div>
+        </div>
+   
+        <!-- Quarto livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Killing-Joke-Alan-Moore/dp/1401216676"><img src="../img/joker.jpg" alt="Capa do livro The killing joke"></a>
+            <div class="book-content">  
+                <h2 class="book-title">Batman - The Killing Joke</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    De acordo com o sorridente motor de loucura e caos conhecido como Coringa, isso é tudo o que separa o são do psicótico. Libertado mais uma vez dos limites do Asilo Arkham, ele está decidido a provar seu ponto perturbado. E ele vai usar o melhor policial de Gotham City, o Comissário Jim Gordon, e sua brilhante e linda filha Barbara para fazer isso.
+
+
+                    <div id="aparecer4" style="display: none;">Agora Batman deve correr para deter seu arqui-inimigo antes que seu reinado de terror reivindique dois dos amigos mais próximos do Cavaleiro das Trevas. Ele pode finalmente colocar um fim ao ciclo de sede de sangue e loucura que liga esses dois inimigos icônicos antes que ele leve à sua conclusão fatal? E quando a origem horripilante do Príncipe Palhaço do Crime for finalmente revelada, a tênue linha que separa a nobreza do Batman e a insanidade do Coringa se romperá de uma vez por todas? </div>
+                </p>
+                <button class="read-more" onclick='minhafuncao4()'>Ler mais</button>
+                <div class="rating-container">
+          <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+            <button class="star" data-value="1" aria-label="1 estrela">★</button>
+            <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+            <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+            <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+            <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+          </div>
+          <p class="rating-text">
+            Média: <span class="average-rating">0.0</span> de 5 
+            (<span class="total-ratings">0</span> avaliações)
+          </p>
+        </div>
+            </div>
+        </div>
+   
+        <!-- Quinto livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Jujutsu-Kaisen-Vol-Gege-Akutami/dp/1974754979/ref=sr_1_1?adgrpid=78595797742&dib=eyJ2IjoiMSJ9.I-ZwbqZjKRm844GAJ1cgU1B_s99xSaHfhU5x0FjN8v1BYn3UbYAC5h24_StYRmnmbNI1wlyQjs8c-8YqGOB7ZhvqjLIp5ltWdstFaW8J0xk3xdEH_Rya2OnM4pIspbm2oVa5CoOyX2RL0OfOnUWxltD5AHh88WBPsIix9PbOp7HY8xm-bCO5S7UyA-gyTwEAyYvsWUXpfTFapY8guu6jSkI4JJ8TMy01S2usBCwdzXrljRawklPNMeRKsraqI970RAbPoTrQIOiM7ND3xD9lHJg3ByjK7ydjh34KlcN9vT0.77ugUKPWkQrFacEu6fyV5S8z7l0NUMTFY5gdc1y53Xc&dib_tag=se&hvadid=595836142213&hvdev=c&hvlocphy=9100421&hvnetw=g&hvqmt=e&hvrand=5711846862105476857&hvtargid=kwd-1408504192756&hydadcr=2047_13490883&keywords=jujutsu+kaisen+26&mcid=0e188174316236ee919625b9b71cd878&qid=1760800861&sr=8-1"><img src="../img/jujutsu.jpg" alt="Capa do livro jujutsu kaisen"></a>
+            <div class="book-content">
+                <h2 class="book-title">Jujutsu Kaisen: Batalha de Feiticeiros - 26</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                   Em um mundo onde espíritos amaldiçoados se alimentam de humanos desavisados, fragmentos do lendário e temido demônio Ryomen Sukuna foram perdidos e espalhados. Se algum demônio consumir as partes do corpo de Sukuna, o poder que ele ganhar poderá destruir o mundo como o conhecemos. Felizmente, existe uma misteriosa escola de feiticeiros de jujutsu que existe para proteger a existência precária dos vivos do sobrenatural!
+                   
+                    <div id="aparecer5" style="display: none;">A batalha entre os dois feiticeiros mais fortes — Gojo e Sukuna — se desenrola em uma escala alucinante! Os combatentes repetidamente abrem seus domínios e consertam técnicas amaldiçoadas queimadas. Seu confronto de idas e vindas continua, mas quando Sukuna invoca Mahoraga, o equilíbrio de poder penderá para o seu lado?</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao5()'>Ler mais</button>
+                <div class="rating-container">
+          <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+            <button class="star" data-value="1" aria-label="1 estrela">★</button>
+            <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+            <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+            <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+            <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+          </div>
+          <p class="rating-text">
+            Média: <span class="average-rating">0.0</span> de 5 
+            (<span class="total-ratings">0</span> avaliações)
+          </p>
+        </div>
+            </div>
+        </div>
+   
+        <!-- Sexto livro -->
+        <div class="book">
+            <a href="https://a.co/d/5iI5YdZ"><img src="../img/asa_noturna.jpg" alt="Capa do livro asa noturna"></a>
+            <div class="book-content">
+                <h2 class="book-title">Asa Noturna - 1</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    Asa Noturna está de volta, e sua vontade de manter Blüdhaven segura nunca foi tão forte! Mas sua cidade adotiva elegeu um novo prefeito com o sobrenome Zucco, o nome do assassino de seus pais. Ao investigar o passado do político com a Batgirl
+                    <div id="aparecer6"style="display: none;">ele desenterra detalhes que irão chocar e alterar para sempre o futuro do herói. Começa aqui a nova fase escrita pelo aclamado roteirista Tom Taylor (DComposição, Injustiça)!</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao6()'>Ler mais</button>
+                <div class="rating-container">
+          <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+            <button class="star" data-value="1" aria-label="1 estrela">★</button>
+            <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+            <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+            <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+            <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+          </div>
+          <p class="rating-text">
+            Média: <span class="average-rating">0.0</span> de 5 
+            (<span class="total-ratings">0</span> avaliações)
+          </p>
+        </div>
+            </div>
+        </div>
+   
+    </div>    
+
+
+   <footer class="site-footer">
+        <p>© 2025 Mundo Entre Linhas. Todos os direitos reservados.</p>
+        <p>Criado com paixão por literatura.</p>
+   </footer>
+   
+   <a href="#" id="back-to-top-btn" title="Voltar ao topo">&uarr;</a>
+
+
+   <script src="livros.js"></script>
+   <div class="hearts-container"></div>
+   
+  <script> const container = document.querySelector('.hearts-container');
+
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.textContent = 'BOOM 💣';
+
+  // posição e tamanho aleatórios
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = 15 + Math.random() * 25 + 'px';
+  heart.style.animationDuration = 4 + Math.random() * 3 + 's';
+  heart.style.opacity = Math.random();
+
+  container.appendChild(heart);
+
+ 
+  setTimeout(() => {
+    heart.remove();
+  }, 7000);
+}
+
+// criar corações infinitamente
+setInterval(createHeart, 300);
+
+</script>
+
+</body>
+</html>

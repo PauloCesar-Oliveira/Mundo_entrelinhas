@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Entre Linhas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png">  <!--FAVICON-->
+
+</head>
+<body>
+
+<!--Menu-->
+    <header>
+        <div class="header-content">
+            <img src="img/logo.png" alt="logoheader" class="logo">
+          <div class="cabecalho">
+              <a href="">Início</a>
+              <div class="dropdown">
+                <a href="#" class="dropdown-btn">Gêneros</a>
+                <div class="dropdown-content">
+                    <a href="livros/romance.html">Romance</a>
+                    <a href="livros/macabro.html">Terror</a>
+                    <a href="livros/aventura.html">HQS</a>
+                </div>
+              </div>
+                <a href="quem_somos/quem-somos.html">Quem somos</a>
+          </div>
+          <img src="img/sistema_solar.webp" alt="logoheader" class="logo">
+        </div>
+    </header>
+
+    <!-- Carrossel tela inicial -->
+    <section class="slider" id="inicio">
+        <div class="slider-content">
+          <input type="radio" name="btn-radio" id="radio1">
+          <input type="radio" name="btn-radio" id="radio2">
+          <input type="radio" name="btn-radio" id="radio3">
+
+          <div class="slide-box primeiro">
+            <img class="img-desktop" src="img/Carrossel 1.png" alt="slide 1">
+            <img class="img-mobile" src="img/Carrossel 1.jpeg" alt="slide 1">
+          </div>
+   
+          <div class="slide-box">
+            <img class="img-desktop" src="img/Carrossel 2.jpeg" alt="slide 2">
+            <img class="img-mobile" src="img/Carrossel 2.jpeg" alt="slide 2">
+          </div>
+
+
+          <div class="slide-box">
+            <img class="img-desktop" src="img/Carrossel.jpeg" alt="slide 3">
+            <img class="img-mobile" src="img/Carrossel.jpeg" alt="slide 3">
+          </div>
+   
+          <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+   
+          <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+        </div>
+    </section>
+
+<!--Explicação site-->
+<main class="container">
+        <section class="how-it-works">
+            <h2 class="section-title">Sua Jornada Literária Começa Aqui!</h2>
+            <p class="section-subtitle">Seja bem-vindo(a) ao nosso cantinho especial para amantes de livros. Veja como é simples explorar nosso universo:</p>
+            <div class="steps-container">
+                <div class="step">
+                    <h3>Explore os Gêneros</h3>
+                    <p>Use nosso menu para mergulhar em mundos de Romance, Terror, HQs e muitas outras categorias que te esperam com histórias incríveis.</p>
+                </div>
+                <div class="step">
+                    <h3>Veja os Destaques</h3>
+                    <p>Nossos carrosséis na página inicial mostram recomendações especiais e os livros que estão em alta. Deixe-se surpreender pela próxima leitura!</p>
+                </div>
+                 <div class="step">
+                    <h3>Compre na Amazon</h3>
+                    <p>Gostou de um livro? Ao clicar na capa, você vai direto para a página da Amazon para realizar sua compra com toda a segurança e praticidade.</p>
+                    <img src="img/Imagem livro amazon.png" alt="Imagem capa interativa">
+                </div>
+                <div class="step">
+                    <h3>Conheça Nossa História</h3>
+                    <p>Visite a seção “Quem Somos” para descobrir a paixão por literatura que deu origem a este projeto e conhecer as mentes por trás dele.</p>
+                </div>
+            </div>
+        </section>
+
+<!--Formulário-->
+        <section class="contact-section">
+            <h2 class="section-title">Fale Conosco</h2>
+            <p class="section-subtitle">Tem alguma dúvida, sugestão ou apenas quer dizer um oi? Preencha o formulário abaixo!</p>
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+
+                <label for="subject">Assunto:</label>
+                <input type="text" id="subject" name="subject" placeholder="Sobre o que você quer falar?" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="6" placeholder="Deixe sua mensagem aqui..." required></textarea>
+
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+
+<!--Mensagem enviada com sucesso-->
+            <div id="success-message">
+                <h3>Mensagem Enviada com Sucesso!</h3>
+                <p>Obrigado por entrar em contato. Responderemos em breve!</p>
+            </div>
+
+        </section>
+    </main>
+
+<!--Footer-->
+ <footer class="site-footer">
+        <p>© 2025 Mundo Entre Linhas. Todos os direitos reservados.</p>
+        <p>Criado com paixão por literatura.</p>
+   </footer>
+
+    <a href="#inicio" id="back-to-top-btn" title="Voltar ao topo">&uarr;</a>
+
+    <script src="script.js"></script>
+   
+      
+
+</body>
+</html>

@@ -1,0 +1,592 @@
+/* Importa fontes externas do Google Fonts para serem usadas no site. */
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Geist+Mono:wght@100..900&display=swap');
+
+/* ---- VARIÁVEIS DE CORES E FONTES ---- */
+:root {
+    --cor-principal: #4A1859; /* Roxo escuro */
+    --cor-secundaria: #ffa100; /* Laranja */
+    --cor-branco: #ffffff; /* Branco */
+}
+
+/* ---- CONFIGURAÇÕES GERAIS ---- */
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Remove a barra de rolagem padrão do navegador. */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Estilos aplicados ao corpo (body) da página. */
+body {
+    font-family: 'Akshar', sans-serif; /* Define a fonte principal da página. */
+    margin: 0; /* Remove a margem padrão. */
+    padding: 0; /* Remove o preenchimento padrão. */
+    background: linear-gradient( to right, #1e0036, #dbc7fd, #1e0036); /* Define um fundo com gradiente de cores. */
+    color: #333; /* Define a cor do texto padrão. */
+    overflow-x: hidden; /* Esconde qualquer conteúdo que transborde horizontalmente. */
+
+}
+
+
+/* ---- CABEÇALHO (HEADER) ---- */
+
+/* Estilização do cabeçalho principal. */
+header {
+    background-color: #4A1859; /* Cor de fundo roxa. */
+    border-bottom-left-radius: 10px; /* Arredonda o canto inferior esquerdo. */
+    border-bottom-right-radius: 10px; /* Arredonda o canto inferior direito. */
+    color: white; /* Cor do texto. */
+    display: flex; /* Habilita o layout flexbox para alinhar os itens. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    justify-content: space-between; /* Distribui o espaço entre os itens. */
+    border-bottom: solid 1.5px #ffa100; /* Adiciona uma borda laranja na parte inferior. */
+    height: 120px; /* Define a altura fixa do cabeçalho. */
+    text-shadow: #000000 2px 2px; /* Adiciona uma sombra ao texto. */
+}
+
+/* Estilização da seção de links de navegação no cabeçalho. */
+.cabecalho {
+    color: #ffffff; /* Cor do texto. */
+    padding: 10px; /* Espaçamento interno. */
+    display: flex; /* Organiza os links em linha. */
+    align-items: center; /* Alinha os links verticalmente. */
+    justify-content: center; /* Alinha os links horizontalmente. */
+    font-size: 1.5em; /* Tamanho da fonte. */
+    font-weight: bold; /* Deixa o texto em negrito. */
+    margin-right: 50px; /* Margens para posicionamento. */
+    margin-left: 10px;
+    border-radius: 15px; /* Arredonda as bordas. */
+    margin: 250px;
+    gap: 80px; /* Espaço entre os links. */
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    min-width: 160px;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.dropdown-content a{
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #aa78ff;
+}
+
+.show{
+    display: block;
+    animation: fadeIn 0.2 ease-in-out;
+}
+
+@keyframes fadeIn {
+    from{ opacity: 0; transform: translateY(-5px);}
+    to{ opacity: 1; transform: translateY(0);} 
+}
+/* Estilos para os links (<a>) dentro do cabeçalho. */
+header a {
+    color: white; /* Cor do texto. */
+    text-decoration: none; /* Adiciona sublinhado. */
+}
+
+/* Estilo para links já visitados. */
+header a:visited {
+    color: rgb(255, 255, 255);
+}
+
+/* Efeito ao passar o mouse sobre os links. */
+header a:hover {
+    color: #ffbf51; /* Muda a cor do texto. */
+    transform: scale(1.1); /* Aumenta o tamanho do link. */
+    transition: 180ms ease-in; /* Define uma transição suave para o efeito. */
+}
+
+/* Estilo para o título principal (h1) no cabeçalho. */
+header h1 {
+    margin: 0; /* Remove margens. */
+    font-size: 2.5em; /* Tamanho da fonte. */
+}
+
+/* Container para alinhar o conteúdo do cabeçalho (logos e navegação). */
+.header-content {
+    display: flex; /* Usa flexbox para alinhar os itens. */
+    align-items: center; /* Alinha verticalmente ao centro. */
+    justify-content: space-evenly; /* Distribui o espaço igualmente. */
+    gap: 10px; /* Espaço entre os elementos. */
+    text-align: center; /* Centraliza o texto. */
+    margin: 0 auto; /* Centraliza o container na página. */
+}
+
+/* Estilização das imagens de logo no cabeçalho. */
+.logo {
+    max-height: 100%; /* Garante que a logo não exceda a altura do header. */
+    height: 100px; /* Altura da logo. */
+    width: auto; /* Mantém a proporção da imagem. */
+}
+
+
+/* ---- CARROSSEL DE IMAGENS (SLIDER) ---- */
+
+/* Define o contêiner principal do carrossel. */
+.slider-content {
+    width: 400%; /* Largura total para comportar todos os slides lado a lado. */
+    margin-top: 5px; /* Margem no topo. */
+    height: auto; /* Altura automática. */
+    display: flex; /* Alinha os slides horizontalmente. */
+}
+
+/* Esconde os botões de rádio (usados para controlar o slide) e as imagens para mobile por padrão. */
+.slider-content input, .img-mobile {
+    display: none;
+}
+
+/* Estilização de cada caixa de slide individual. */
+.slide-box {
+    width: 25%; /* Cada slide ocupa 25% da largura do .slider-content. */
+    height: auto;
+    position: relative; /* Necessário para posicionar os botões de navegação. */
+    transition: 1s; /* Animação suave na troca de slides. */
+}
+
+/* Estilização das imagens dentro do carrossel. */
+.slide-box img {
+    width: 100%; /* Imagem ocupa toda a largura da .slide-box. */
+    height: 500px; /* Altura fixa para as imagens. */
+    border: 1.5px solid #ffa100; /* Borda laranja. */
+}
+
+/* Posicionamento dos botões de navegação (manual e automático). */
+.nav-manual, .nav-auto {
+    position: absolute; /* Permite posicionar sobre as imagens. */
+    width: 100%;
+    margin-top: 28%;
+    margin-left: 45%;
+    display: flex;
+    float: center;
+}
+
+/* Estilização dos botões (bolinhas). */
+.nav-manual .manual-btn, .nav-auto div {
+    border: 2px solid #ffa100; /* Borda laranja. */
+    padding: 10px; /* Espaçamento interno para criar o formato de bolinha. */
+    border-radius: 50%; /* Deixa o elemento redondo. */
+    cursor: pointer; /* Muda o cursor para uma mão. */
+    transition: 0.2s; /* Transição suave. */
+    margin-top: -32px;
+}
+
+/* Espaçamento entre os botões. */
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Efeito ao passar o mouse sobre o botão manual. */
+.nav-manual .manual-btn:hover {
+    background-color: #ffa100;
+}
+
+/* Lógica de controle do Carrossel */
+/* Quando o primeiro radio button está selecionado, a bolinha automática correspondente fica roxa. */
+#radio1:checked ~ .nav-auto .auto-btn1,
+#radio2:checked ~ .nav-auto .auto-btn2,
+#radio3:checked ~ .nav-auto .auto-btn3 {
+    background-color: #b039d4;
+}
+
+/* Move o conjunto de slides para a esquerda com base no botão de rádio selecionado. */
+#radio1:checked ~ .primeiro {
+    margin-left: 0%; /* Mostra o primeiro slide. */
+}
+
+#radio2:checked ~ .primeiro {
+    margin-left: -25%; /* Desloca para mostrar o segundo slide. */
+}
+
+#radio3:checked ~ .primeiro {
+    margin-left: -50%; /* Desloca para mostrar o terceiro slide. */
+}
+
+
+/* ---- SEÇÃO DE CONTEÚDO PRINCIPAL ---- */
+
+/* Estilização do container de texto "Bem-vindo". */
+.fundo {
+    color: rgb(255, 255, 255); /* Cor do texto. */
+    font-weight: bold; /* Texto em negrito. */
+    font-size: 25px; /* Tamanho da fonte. */
+    margin-top: 35px; /* Margem superior. */
+    margin-left: 60px; /* Margens laterais. */
+    margin-right: 60px;
+    border: 5px double #ffa100; /* Borda dupla laranja. */
+    display: flex;
+    flex-direction: column;
+    background-color: #4a1859; /* Cor de fundo roxa. */
+    border-radius: 10px; /* Bordas arredondadas. */
+}
+
+/* Estilização do parágrafo dentro da seção "fundo". */
+div p {
+    margin-top: 10px; /* Margem no topo do texto. */
+    text-align: justify; /* Alinhamento justificado. */
+    padding: 15px; /* Espaçamento interno. */
+    text-shadow: #000000 1.5px 1.5px; /* Sombra no texto. */
+}
+
+/* ---- ESTILOS DE LIVROS (Não utilizados na página principal, mas definidos) ---- */
+/* Os estilos abaixo parecem ser para uma seção de livros que não está no HTML fornecido, mas estão prontos para uso. */
+
+/* Estilo do container de cada livro. */
+.book {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da imagem (capa) do livro. */
+.book img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+    transition: 500ms linear; /* Efeito de transição suave. */
+}
+
+/* Efeito de sombra ao passar o mouse sobre a capa do livro. */
+.book img:hover {
+    top: 1px;
+    box-shadow: 5px 5px 5px #FFA100;
+}
+
+/* Container para o conteúdo textual do livro (título, descrição, etc.). */
+.book-content {
+    flex: 1; /* Permite que este container ocupe o espaço restante. */
+}
+
+/* Estilo do título do livro. */
+.book-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #4A1859;
+}
+
+/* ---- RODAPÉ (FOOTER) ---- */
+.site-footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-top: 2px solid var(--cor-secundaria);
+}
+
+/* ---- BOTÃO VOLTAR AO TOPO ---- */
+#back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--cor-secundaria);
+    text-align: center;
+    line-height: 46px;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+#back-to-top-btn:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+}
+#back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* RESPONSIVIDADE */
+/* @media aplica estilos apenas quando a condição (tamanho da tela) é atendida. */
+
+/* Para tablets e telas menores (até 768px) */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 2rem;
+    }
+    
+    .header-content {
+        flex-direction: column; /* Coloca o logo acima do texto */
+        gap: 10px;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Menu vira uma coluna */
+        gap: 10px;
+    }
+
+    .banner h2 {
+        font-size: 2.5rem;
+    }
+
+    .recipe-container {
+        flex-direction: column; /* Receitas ficam uma abaixo da outra */
+    }
+}
+
+/* Para celulares (até 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .content-section {
+        padding: 1.5rem;
+    }
+
+        .site-header h1 {
+            font-size: 1.8rem;
+        }
+    }
+
+    /* ---- SEÇÃO DE CONTEÚDO PRINCIPAL (ATUALIZADO) ---- */
+.container {
+    padding: 20px 60px;
+}
+
+.section-title {
+    color: var(--cor-principal);
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px var(--cor-secundaria);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #333;
+    font-size: 1.2em;
+    margin-top: -15px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---- SEÇÃO "COMO FUNCIONA" (LAYOUT CORRIGIDO E REFINADO) ---- */
+.how-it-works {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px 50px; /* Aumenta o espaçamento interno geral */
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border: 2px solid var(--cor-secundaria);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.how-it-works .section-title {
+    margin-bottom: 10px;
+}
+
+.how-it-works .section-subtitle {
+    margin-bottom: 50px; /* Mais espaço entre o subtítulo e os cards */
+}
+
+/* O container que alinha os 4 passos */
+.steps-container {
+    display: flex;
+    /* PONTO CRÍTICO: Alinha todos os cards no topo, resolvendo o desalinhamento vertical */
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px; /* Aumenta o espaço entre os cards para um melhor respiro */
+}
+
+/* Estilo de cada card de passo */
+.step {
+    flex: 1; /* Garante que os cards dividam o espaço igualmente */
+    /* PONTO CRÍTICO: Centraliza todo o conteúdo (título, texto, imagem) para um visual limpo */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step h3 {
+    color: var(--cor-principal);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    /* Garante que os títulos fiquem bem alinhados mesmo se tiverem tamanhos diferentes */
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo do texto descritivo */
+.step p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    text-shadow: none;
+    /* Força o alinhamento centralizado para um bloco de texto mais coeso */
+    text-align: center;
+}
+
+/* Estilo para a imagem que você adicionou */
+.step img {
+    max-width: 100%; /* A imagem se ajustará à largura do card */
+    height: auto;
+    margin-top: 20px; /* Adiciona um espaço consistente acima da imagem */
+}
+
+/* Seção de Formulário de Contato */
+.contact-section {
+    background-color: var(--cor-principal);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--cor-secundaria);
+}
+
+.contact-section .section-title {
+    color: var(--cor-branco);
+    text-shadow: 1px 1px #000;
+}
+
+.contact-section .section-subtitle {
+    color: #dbc7fd;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    color: var(--cor-branco);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-family: 'Akshar', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 8px rgba(255, 161, 0, 0.5);
+}
+
+.submit-btn {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #ffb940; /* Um tom mais claro do laranja */
+    transform: translateY(-3px);
+}
+
+
+/* ---- AJUSTES DE RESPONSIVIDADE ---- */
+
+/* Atualize suas media queries existentes com estas regras */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .steps-container {
+        flex-direction: column; /* Coloca os passos um abaixo do outro em telas menores */
+    }
+}
+
+/* ---- ESTILO DA MENSAGEM DE SUCESSO DO FORMULÁRIO ---- */
+
+#success-message {
+    display: none; /* A mensagem começa escondida */
+    padding: 30px;
+    background-color: var(--cor-secundaria);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--cor-principal);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#success-message h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+}
+
+#success-message p {
+    margin: 0;
+    font-size: 1.2em;
+    text-shadow: none;
+}
+
+/* Classe que o JavaScript vai adicionar para mostrar a mensagem */
+.show-message {
+    display: block !important; /* O !important garante que a regra seja aplicada */
+}

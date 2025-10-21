@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Entre Linhas</title>
+    <link rel="stylesheet" href="mundo.css">
+    <link rel="icon" href="../img/favicon.png">  <!--FAVICON-->
+</head>
+<body>
+
+
+    <header>
+        <div class="header-content">
+            <img src="../img/favicon.png" alt="logoheader" class="logo">
+          <div class="cabecalho">
+              <a href="../index.html">Início</a>
+              <div class="dropdown">
+                <a href="#" class="dropdown-btn">Gêneros</a>
+                <div class="dropdown-content">
+                    <a href="../livros/romance.html">Romance</a>
+                    <a href="../livros/macabro.html">Terror</a>
+                    <a href="../livros/aventura.html">HQS</a>
+                </div>
+              </div>
+              <a href="../quem_somos/quem-somos.html">Quem somos</a>
+          </div>
+        </div>
+    </header>
+
+
+    <!-- Slider -->
+    <section class="slider">
+        <div class="slider-content">
+          <input type="radio" name="btn-radio" id="radio1">
+          <input type="radio" name="btn-radio" id="radio2">
+          <input type="radio" name="btn-radio" id="radio3">
+   
+          <div class="slide-box primeiro">
+            <img class="img-desktop" src="../img/romance.1.jpeg" alt="slide 1">
+            <img class="img-mobile" src="../img/romance.1.jpeg" alt="slide 1">
+          </div>
+   
+          <div class="slide-box">
+            <img class="img-desktop" src="../img/romance.2.jpeg" alt="slide 2">
+            <img class="img-mobile" src="../img/romance.2.jpeg" alt="slide 2">
+          </div>
+
+
+          <div class="slide-box">
+            <img class="img-desktop" src="../img/Carrossel Romance 3.png" alt="slide 3">
+            <img class="img-mobile" src="../img/Carrossel Romance 3.png" alt="slide 3">
+          </div>
+   
+          <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+   
+          <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+        </div>
+    </section>
+
+    <!-- Barra de pesquisa -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder=" Pesquise um livro..." />
+  </div>
+
+
+    <div class="container">
+
+
+<!-- Primeiro livro -->
+<div class="book">
+    <a href="https://www.amazon.com.br/experimento-amor-Nova-Sucesso-TikTok/dp/6555654740"><img src="../img/umexperimentode_amor.jpg" alt="Capa do livro Saboroso Cadáver"></a>
+    <div class="book-content">
+        <h2 class="book-title">Um Experimento de Amor em Nova York</h2>
+        <p class="book-description">
+            <h4>SINOPSE:</h4>
+            Rosie largou o emprego para escrever romances, mas agora enfrenta um bloqueio criativo — e, para piorar, o teto literalmente desabou sobre sua cabeça.            <span class="extra-content"> </span>
+            <div id="aparecer" style="display: none;">Sem ter para onde ir, ela se abriga no apartamento da melhor amiga… e descobre que vai dividi-lo com Lucas, o primo dela — e seu crush secreto da internet. Para ajudá-la a recuperar a inspiração, ele propõe uma série de encontros de mentira. Mas entre risadas, química e um sotaque irresistível, o “experimento” começa a parecer muito real.</div>
+<!--ARRUMAR O ID APARECER PARA QUE APAREÇA SÓ DEPOIS QUE A PESSOA CLICAR NO BOTÃO!-->
+        </p>
+        <button class="read-more" onclick='minhafuncao()'>Ler mais</button>
+        <div class="rating-container">
+          <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+            <button class="star" data-value="1" aria-label="1 estrela">★</button>
+            <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+            <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+            <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+            <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+          </div>
+            <p class="rating-text">
+           Média: <span class="average-rating">0.0</span> de 5 
+            (<span class="total-ratings">0</span> avaliações)
+            </p>
+        </div>
+    </div>
+</div>
+   
+        <!-- Segundo livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Melhor-do-que-nos-filmes/dp/6555607289"><img src="../img/melhorquenosfilmes.jpg" alt="Capa do livro Uma mulher no escuro"></a>
+            <div class="book-content">
+                <h2 class="book-title">Melhor Do Que Nos Filmes </h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                      Liz sempre acreditou que sua vida amorosa seria como um filme romântico... até que a realidade decide improvisar o roteiro.
+                    <div id="aparecer2" style="display: none;" > Para conquistar o crush dos sonhos, Liz pede ajuda ao vizinho irritante — e acaba descobrindo que o amor pode estar onde ela menos esperava. Uma história divertida, doce e cheia de referências aos clássicos do cinema romântico.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao2()'>Ler mais</button>
+                <div class="rating-container">
+                  <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+                      <button class="star" data-value="1" aria-label="1 estrela">★</button>
+                      <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+                      <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+                      <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+                      <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+                  </div>
+                  <p class="rating-text">
+                      Média: <span class="average-rating">0.0</span> de 5 
+                      (<span class="total-ratings">0</span> avaliações)
+                  </p>
+                </div>
+            </div>
+        </div>
+   
+        <!-- Terceiro livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/farsa-amor-Espanha-Sucesso-TikTok/dp/6555652977"><img src="../img/Uma farsa de amor na espanha.png" alt="Capa do liro Jantar Secreto"></a>
+            <div class="book-content">
+                <h2 class="book-title">Uma Farsa De Amor Na Espanha</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    Catalina precisa de um acompanhante para o casamento da irmã — e o único disponível é seu colega de trabalho (e maior rival).
+                    <div id="aparecer3" style="display: none;">Entre brigas, provocações e viagens à Espanha, o plano de fingir um relacionamento começa a sair do controle. Uma comédia romântica cheia de química, humor e emoção, que mostra como a linha entre o ódio e o amor pode ser muito tênue.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao3()'>Ler mais</button>
+                <div class="rating-container">
+                  <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+                      <button class="star" data-value="1" aria-label="1 estrela">★</button>
+                      <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+                      <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+                      <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+                      <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+                  </div>
+                  <p class="rating-text">
+                      Média: <span class="average-rating">0.0</span> de 5 
+                      (<span class="total-ratings">0</span> avaliações)
+                  </p>
+                </div>
+            </div>
+        </div>
+   
+        <!-- Quarto livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/mec%C3%A2nica-amor-Alexene-Farol-Follmuth/dp/6588131992"><img src="../img/mecanica_amor.jpg" alt="Capa do livro Dias perfeitos"></a>
+            <div class="book-content">  
+                <h2 class="book-title">A Mecânica Do Amor</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    Bel não faz ideia do que quer para o futuro — até descobrir um talento inesperado para engenharia e ser convidada a entrar no clube de robótica da escola. 
+                    <div id="aparecer4" style="display: none;">O problema? O clube é liderado por Teo — inteligente, popular e irritantemente encantador. O que começa com faíscas de rivalidade logo vira uma conexão irresistível, entre robôs de combate, olhares trocados e playlists de Taylor Swift. Uma comédia romântica divertida sobre autodescoberta, tecnologia e amor improvável.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao4()'>Ler mais</button>
+                <div class="rating-container">
+                  <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+                      <button class="star" data-value="1" aria-label="1 estrela">★</button>
+                      <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+                      <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+                      <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+                      <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+                  </div>
+                  <p class="rating-text">
+                      Média: <span class="average-rating">0.0</span> de 5 
+                      (<span class="total-ratings">0</span> avaliações)
+                  </p>
+                </div>
+            </div>
+        </div>
+   
+        <!-- Quinto livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Todo-esse-tempo-Rachael-Lippincott/dp/6588131089"><img src="../img/todoessetempo.jpg" alt="Capa do livro x"></a>
+            <div class="book-content">
+                <h2 class="book-title">Todo esse Tempo</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    Kyle achava que tinha tudo — até a noite da formatura mudar sua vida para sempre. Após um acidente trágico, ele perde a namorada e precisa reaprender a viver.
+                    <div id="aparecer5" style="display: none;">No hospital, Kyle conhece Marley, uma garota marcada pela própria perda. Unidos pela dor, eles encontram força um no outro e descobrem que o amor pode nascer mesmo entre os destroços. Mas, à medida que se aproximam, Kyle percebe que talvez o destino ainda guarde uma última reviravolta.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao5()'>Ler mais</button>
+                <div class="rating-container">
+                  <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+                      <button class="star" data-value="1" aria-label="1 estrela">★</button>
+                      <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+                      <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+                      <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+                      <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+                  </div>
+                  <p class="rating-text">
+                      Média: <span class="average-rating">0.0</span> de 5 
+                      (<span class="total-ratings">0</span> avaliações)
+                  </p>
+                </div>
+            </div>
+        </div>
+   
+        <!-- Sexto livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Imperfeitos-Christina-Lauren/dp/6559571289"><img src="../img/imperfeitos.jpg" alt="Capa do livro y"></a>
+            <div class="book-content">
+                <h2 class="book-title">Imperfeitos</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    Olive sempre foi a gêmea azarada — até que um casamento desastroso e uma viagem inesperada ao Havaí mudam tudo.
+                    <div id="aparecer6"style="display: none;">Após uma intoxicação alimentar arruinar a festa, ela acaba dividindo a lua de mel com Ethan, o irritante irmão do noivo... e seu inimigo número um. O plano é apenas aproveitar as férias, mas uma mentirinha os aproxima mais do que esperavam. Entre brigas, risadas e química tropical, Olive descobre que o azar pode, às vezes, ser o melhor golpe de sorte.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao6()'>Ler mais</button>
+                <div class="rating-container">
+                  <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+                      <button class="star" data-value="1" aria-label="1 estrela">★</button>
+                      <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+                      <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+                      <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+                      <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+                  </div>
+                  <p class="rating-text">
+                      Média: <span class="average-rating">0.0</span> de 5 
+                      (<span class="total-ratings">0</span> avaliações)
+                  </p>
+                </div>
+            </div>
+        </div>
+   
+    </div>    
+
+
+   <footer class="site-footer">
+        <p>© 2025 Mundo Entre Linhas. Todos os direitos reservados.</p>
+        <p>Criado com paixão por literatura.</p>
+   </footer>
+   
+   <a href="#" id="back-to-top-btn" title="Voltar ao topo">&uarr;</a>
+
+
+   <script src="livros.js"></script>
+   <div class="hearts-container"></div>
+   
+  <script> const container = document.querySelector('.hearts-container');
+
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.textContent = '❤';
+
+  // posição e tamanho aleatórios
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = 15 + Math.random() * 25 + 'px';
+  heart.style.animationDuration = 4 + Math.random() * 3 + 's';
+  heart.style.opacity = Math.random();
+
+  container.appendChild(heart);
+
+ 
+  setTimeout(() => {
+    heart.remove();
+  }, 7000);
+}
+
+// criar corações infinitamente
+setInterval(createHeart, 100);
+
+</script>
+
+</body>
+</html>

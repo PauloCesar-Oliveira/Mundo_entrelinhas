@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&family=Geist+Mono:wght@100..900&display=swap');
+
+::-webkit-scrollbar {
+    display: none; /* Remove a barra de rolagem */
+}
+
+body {
+    /* VERSATILIDADE! */
+    font-family: 'Akshar', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/gif_animado.gif);
+    color: #ffffff;
+    font-weight: bold;
+    overflow-x: hidden;
+}
+
+header {
+    background:linear-gradient( #000000, #c70000); /* Cor de fundo roxa. */
+    border-bottom-left-radius: 10px; /* Arredonda o canto inferior esquerdo. */
+    border-bottom-right-radius: 10px; /* Arredonda o canto inferior direito. */
+    color: white; /* Cor do texto. */
+    display: flex; /* Habilita o layout flexbox para alinhar os itens. */
+    align-items: center; /* Alinha os itens verticalmente ao centro. */
+    justify-content: space-between; /* Distribui o espaço entre os itens. */
+    border-bottom: solid 1.5px #ffa100; /* Adiciona uma borda laranja na parte inferior. */
+    height: 120px; /* Define a altura fixa do cabeçalho. */
+    text-shadow: #000000 2px 2px; /* Adiciona uma sombra ao texto. */
+}
+
+.cabecalho {
+    color: #ffffff; /* Cor do texto. */
+    padding: 10px; /* Espaçamento interno. */
+    display: flex; /* Organiza os links em linha. */
+    align-items: center; /* Alinha os links verticalmente. */
+    justify-content: center; /* Alinha os links horizontalmente. */
+    font-size: 1.5em; /* Tamanho da fonte. */
+    font-weight: bold; /* Deixa o texto em negrito. */
+    margin-right: 50px; /* Margens para posicionamento. */
+    margin-left: 10px;
+    border-radius: 15px; /* Arredonda as bordas. */
+    margin: 250px;
+    gap: 80px; /* Espaço entre os links. */
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+}
+
+.dropdown-btn{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    min-width: 160px;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.dropdown-content a{
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    
+}
+
+.dropdown-content a:hover{
+    background-color: #ffba39;
+    border-radius: 15px;
+}
+
+.show{
+    display: block;
+    animation: fadeIn 0.2 ease-in-out;
+}
+
+@keyframes fadeIn {
+    from{ opacity: 0; transform: translateY(-5px);}
+    to{ opacity: 1; transform: translateY(0);} 
+}
+
+header a {
+    color: white; /* Cor do texto. */
+    text-decoration: none; /* Adiciona sublinhado. */
+}
+
+/* Estilo para links já visitados. */
+header a:visited {
+    color: rgb(255, 255, 255);
+}
+
+/* Efeito ao passar o mouse sobre os links. */
+header a:hover {
+    color: #c70000; /* Muda a cor do texto. */
+    transform: scale(1.1); /* Aumenta o tamanho do link. */
+    transition: 180ms ease-in; /* Define uma transição suave para o efeito. */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header-content {
+   display: flex; /* Usa flexbox para alinhar os itens. */
+    align-items: center; /* Alinha verticalmente ao centro. */
+    justify-content: space-evenly; /* Distribui o espaço igualmente. */
+    gap: 10px; /* Espaço entre os elementos. */
+    text-align: center; /* Centraliza o texto. */
+    margin: 0 auto; /* Centraliza o container na página. */
+
+}
+
+.book {
+    display: flex;
+    align-items: flex-start;
+    background-image: url(../img/fundo_preto.jpg);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.book img:hover{top:1px; box-shadow: 5px 5px 5px #FFA100}
+
+
+.book-content {
+    flex: 1;
+}
+
+.book-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #750000;
+    text-shadow: #ffbf51 0.5px 0.5px 0.5px;
+}
+
+.book-description {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    max-height: 100px; /* Altura limitada para esconder o conteúdo */
+    overflow: hidden;  /* Esconde o conteúdo excedente */
+    transition: max-height 0.3s ease; /* Transição suave */
+}
+
+.book-description.expanded {
+    max-height: 500px; /* Aumenta a altura para mostrar o conteúdo completo */
+}
+
+.book:hover{top:3px; box-shadow: 5px 5px 5px #c74747}
+
+.read-more {
+    border: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #750000;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background-color: #FFA100;
+}
+
+.read-more:focus {
+    outline: none; /* Remove a borda de foco */
+}
+
+
+.stars {
+    color: #FFA100;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+
+h4 {
+    color: #FFA100;
+}
+
+P {
+    color:rgb(0, 0, 0)0;
+}
+
+.logo {
+    max-height: 100%; /* Garante que a logo não exceda a altura do header. */
+    height: 100px; /* Altura da logo. */
+    width: auto; /* Mantém a proporção da imagem. */
+}
+
+.btn-aumentar {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-aumentar > i {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    cursor: pointer;
+    text-shadow: 0 0 0.5em  #ffffff;
+}
+
+/* slider */
+
+section.slider{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;   
+}
+
+.slider-content {
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+.slider-content input, .img-mobile{
+    display: none; 
+}
+
+.slide-box {
+    width: 25%;
+    height: auto;
+    position: relative;
+    transition: 1s;
+} 
+
+.slide-box img {
+    width: 100%;
+    height: 500px; 
+    border: solid 1px #FFA100;
+    border-radius: 15px;
+}
+
+.nav-manual, .nav-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 27%;
+    margin-left: 45%;
+    display: flex;
+    float: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 2px solid #4A1859;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover {
+    background-color: #FFA100;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1 {
+    background-color: #FFA100;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2 {
+    background-color: #FFA100;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3 {
+    background-color: #FFA100;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;   
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;   
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;   
+}
+
+/* end of the slider */
+
+footer {
+    background-color: #750000;
+    color: #fdf5e6;
+    width: 100%;
+    height: 5%;
+    text-align:center;	    
+ }
+
+ /* ---- BOTÃO VOLTAR AO TOPO ---- */
+#back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000214;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ffa100;
+    text-align: center;
+    line-height: 46px;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+#back-to-top-btn:hover {
+    background-color: #ffa100;
+    color: #4A1859;
+}
+#back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.stars .star {
+    font-size: 24px;
+    color: #555; /* Cor da estrela inativa */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.stars .star:hover {
+    transform: scale(1.2);
+    color: #ffc107; /* Cor ao passar o mouse */
+}
+
+/* Cor da estrela ATIVA (que faz parte da média) */
+.stars .star.active {
+    color: #FFD700; /* Dourado */
+    text-shadow: 0 0 5px #FFD700;
+}
+
+.rating-text {
+    font-size: 14px;
+    color: #8a0000;
+    margin-top: 5px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 20px;
+}
+
+/* Input com fundo transparente */
+#searchInput {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* borda clara e suave */
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1); /* leve transparência */
+  color: #fff; /* texto branco para contraste */
+  transition: 0.3s;
+  backdrop-filter: blur(5px); /* efeito de vidro fosco */
+}
+
+/* Ao focar (clicar) no input */
+#searchInput:focus {
+  border-color: #ff6f91;
+  box-shadow: 0 0 10px rgba(255, 111, 145, 0.6);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Placeholder mais suave */
+#searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* === RESPONSIVIDADE === */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .cabecalho {
+        margin: 0;
+        gap: 40px;
+        font-size: 1.2em;
+        flex-wrap: wrap;
+    }
+    .book {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .book img {
+        margin: 0 auto 15px;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
+    .cabecalho {
+        flex-direction: column;
+        margin: 0;
+        gap: 20px;
+        font-size: 1.1em;
+        text-align: center;
+    }
+    .logo {
+        height: 80px;
+    }
+    .book {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    .book img {
+        width: 130px;
+    }
+    .slider-content img {
+        height: 300px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .cabecalho {
+        flex-direction: column;
+        font-size: 1em;
+        gap: 15px;
+        margin: 0;
+    }
+    .logo {
+        height: 70px;
+    }
+    .book {
+        width: 90%;
+        margin: 20px auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .book img {
+        width: 120px;
+    }
+    .book-title {
+        font-size: 1.2em;
+    }
+    .book-description {
+        font-size: 0.95em;
+    }
+    .read-more {
+        width: 100%;
+        font-size: 0.95em;
+    }
+    .slider-content img {
+        height: 230px;
+    }
+    #back-to-top-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+        line-height: 38px;
+    }
+}

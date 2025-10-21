@@ -1,0 +1,447 @@
+/* ---- ESTILOS DA PÁGINA "QUEM SOMOS" ---- */
+/* === BASE GERAL === */
+.team-section {
+    padding: 2rem;
+}
+
+.team-container {
+    display: grid;
+    /* Cria um grid responsivo: tenta colocar 3 colunas, depois 2, depois 1 */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem; /* Espaço entre os cards */
+}
+
+.team-member-card {
+    background-color: var(--cor-branco);
+    border-radius: 15px;
+    box-shadow: var(--sombra-padrao);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-top: 5px solid var(--cor-principal);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px); /* Efeito de "flutuar" */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Deixa a foto redonda */
+    object-fit: cover; /* Garante que a imagem não se estique */
+    border: 5px solid var(--cor-secundaria); /* Borda laranja na foto */
+    margin-bottom: 1rem;
+}
+
+.member-info h3 {
+    color: var(--cor-principal);
+    font-size: 1.5em;
+    margin-bottom: 0.5rem;
+}
+
+.member-info h4 {
+    color: var(--cor-secundaria);
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.member-info p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #555;
+}
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Deixa a foto redonda */
+    object-fit: cover; /* Garante que a imagem não se estique */
+    border: 5px solid #ffa100; /* Borda laranja na foto */
+    margin-bottom: 1rem;
+}
+
+
+/* ---- AJUSTES DE RESPONSIVIDADE PARA "QUEM SOMOS" ---- */
+@media (max-width: 768px) {
+    .story-content {
+        flex-direction: column; /* Coloca a imagem acima do texto em telas menores */
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Akshar', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1e0036, #dbc7fd, #1e0036);
+    color: #333;
+}
+
+/* === CABEÇALHO === */
+header {
+    background-color: #4A1859;
+    border-bottom: 2px solid #ffa100;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    text-shadow: 2px 2px #000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.logo {
+    height: 90px;
+    width: auto;
+}
+
+/* === MENU DE NAVEGAÇÃO === */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #ffa100;
+    transform: scale(1.05);
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: rgba(74, 24, 89, 0.95);
+    border: 1px solid #ffa100;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.dropdown-content a:hover {
+    background-color: #aa78ff;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* Seção "Nossa História" */
+.about-section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    margin-top: 35px; /* <-- ADICIONE ESTA LINHA */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.story-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.story-content img {
+    max-width: 300px;
+    border-radius: 10px;
+    border: 3px solid #ffa100;
+}
+
+.story-text h3 {
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulos);
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+
+.story-text p {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+/* === EQUIPE === */
+team-section {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+}
+
+/* Mantém os cards centralizados e bem espaçados */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 80px; /* mais espaço antes do rodapé */
+}
+
+/* Card de membro */
+.team-member-card {
+    background-color: #fff;
+    border: 3px solid #ffa100;
+    border-radius: 15px;
+    width: 270px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.member-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.member-info h3 {
+    color: #4A1859;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.member-info h4 {
+    color: #ffa100;
+    font-weight: 600;
+    margin: 5px 0 10px;
+    font-size: 1em;
+}
+
+.member-info ul {
+    padding-left: 18px;
+    list-style-type: disc;
+}
+
+.member-info li {
+    font-size: 0.95em;
+    margin-bottom: 6px;
+}
+
+/* ---- BOTÃO VOLTAR AO TOPO ---- */
+#back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4A1859;
+    color: white;
+    border: 2px solid #ffa100;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 46px;
+    cursor: pointer;
+    display: none; /* Começa escondido */
+    z-index: 1000;
+    transition: opacity 0.4s, transform 0.4s;
+    text-decoration: none;
+}
+
+#back-to-top-btn.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* === RODAPÉ === */
+.site-footer {
+    background-color: #4A1859;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-top: 2px solid #ffa100;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+
+/* Tablets e telas médias (até 1024px) */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .story-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-content img {
+    max-width: 80%;
+  }
+
+  .team-container {
+    gap: 1.5rem;
+  }
+}
+
+/* Celulares grandes e telas pequenas (até 768px) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .story-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .story-content img {
+    width: 90%;
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+
+  .story-text h3 {
+    font-size: 1.4em;
+  }
+
+  .story-text p {
+    font-size: 1em;
+    text-align: justify;
+  }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member-card {
+    width: 85%;
+    max-width: 350px;
+  }
+
+  #back-to-top-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    line-height: 42px;
+  }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .story-text h3 {
+    font-size: 1.2em;
+  }
+
+  .story-text p {
+    font-size: 0.95em;
+  }
+
+  .team-member-card {
+    width: 95%;
+  }
+
+  .member-info h3 {
+    font-size: 1em;
+  }
+
+  .member-info h4 {
+    font-size: 0.9em;
+  }
+
+  .member-info li {
+    font-size: 0.85em;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}

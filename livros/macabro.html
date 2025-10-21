@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Entre Linhas</title>
+    <link rel="stylesheet" href="macabro.css">
+    <link rel="icon" href="../img/favicon.png">  <!--FAVICON-->
+</head>
+<body>
+
+
+    <header>
+        <div class="header-content">
+            <img src="../img/favicon.png" alt="logoheader" class="logo">
+          <div class="cabecalho">
+              <a href="../index.html">Início</a>
+              <div class="dropdown">
+                <a href="#" class="dropdown-btn">Gêneros</a>
+                <div class="dropdown-content">
+                    <a href="../livros/romance.html">Romance</a>
+                    <a href="../livros/macabro.html">Terror</a>
+                    <a href="../livros/aventura.html">HQS</a>
+                </div>
+              </div>
+              <a href="../quem_somos/quem-somos.html">Quem somos</a>
+          </div>
+          <img src="../img/corvo.2.png" alt="logoheader" class="logo">
+        </div>
+    </header>
+
+
+    <!-- Slider -->
+    <section class="slider">
+        <div class="slider-content">
+          <input type="radio" name="btn-radio" id="radio1">
+          <input type="radio" name="btn-radio" id="radio2">
+          <input type="radio" name="btn-radio" id="radio3">
+   
+          <div class="slide-box primeiro">
+            <img class="img-desktop" src="../img/Carrossel 1 terror.png" alt="slide 1">
+            <img class="img-mobile" src="../img/aventura.1.jpeg" alt="slide 1">
+          </div>
+   
+          <div class="slide-box">
+            <img class="img-desktop" src="../img/Carrosel 2 terror.jpg" alt="slide 2">
+            <img class="img-mobile" src="../img/aventura.2.jpeg" alt="slide 2">
+          </div>
+
+
+          <div class="slide-box">
+            <img class="img-desktop" src="../img/Carrossel Terror 3.png" alt="slide 3">
+            <img class="img-mobile" src="../img/Carrossel Terror 3.png" alt="slide 3">
+          </div>
+   
+          <div class="nav-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+   
+          <div class="nav-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+        </div>
+    </section>
+
+    <!-- Barra de pesquisa -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder=" Pesquise um livro..." />
+  </div>
+
+
+    <div class="container">
+
+
+<!-- Primeiro livro -->
+<div class="book">
+    <a href="https://www.amazon.com.br/Saboroso-Cad%C3%A1ver-Agustina-Bazterrica/dp/6555981881"><img src="../img/saboroso_cadaver.jpg" alt="Capa do livro Saboroso Cadáver"></a>
+    <div class="book-content">
+        <h2 class="book-title">Saboroso Cadáver</h2>
+        <p class="book-description">
+            <h4>SINOPSE:</h4>
+            Diz o antigo ditado que “Você é o que você come”. No romance Saboroso Cadáver, de Agustina Bazterrica, esse ditado é levado às últimas consequências. O livro conta a história de um vírus que se espalha entre os animais de todo o planeta e torna sua carne mortal aos humanos. Impossibilitados de utilizar os animais para a alimentação, a sociedade regulariza a criação e a reprodução de seres humanos como animais de abate, transformando o mundo num lugar cinzento, cínico e inóspito. Nesse romance visceral, grotesco, repleto de descrições vívidas e nauseantes capaz de nos alimentar na medida certa, vamos acompanhar a rotina de Marcos Tejo, funcionário do frigorífico Krieg,, que recebe de presente uma mulher viva, considerada “carne de primeira”. Ironicamente, esse funcionário parece ser o mais humano nesse mundo terrível. Seguindo seus passos, presenciamos o processo metódico da criação de pessoas, abates, experimentos de laboratório, caçadas humanas e suntuosos jantares canibais.
+            <span class="extra-content"> </span>
+            <div id="aparecer" style="display: none;">Publicado originalmente em 2017, Saboroso Cadáver ganhou o Prêmio Clarín Novela naquele mesmo ano, na Argentina. Três anos depois, a tradução americana do livro recebeu o Ladies of Horror Fiction Award como melhor romance de 2020. Além disso, de acordo com o jornal Washington Post, foi um dos melhores lançamentos de horror, ficção científica e fantasia de 2020, ao lado de Temporada de Caça, de Stephen Graham Jones.</div>
+<!--ARRUMAR O ID APARECER PARA QUE APAREÇA SÓ DEPOIS QUE A PESSOA CLICAR NO BOTÃO!-->
+        </p>
+        <button class="read-more" onclick='minhafuncao()'>Ler mais</button>
+        <div class="rating-container">
+          <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+            <button class="star" data-value="1" aria-label="1 estrela">★</button>
+            <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+            <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+            <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+            <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+          </div>
+          <p class="rating-text">
+            Média: <span class="average-rating">0.0</span> de 5 
+            (<span class="total-ratings">0</span> avaliações)
+          </p>
+        </div>
+    </div>
+  </div>
+   
+        <!-- Segundo livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Uma-mulher-escuro-Raphael-Montes/dp/8535931767"><img src="../img/uma_mulherno_escuro.jpg" alt="Capa do livro Uma mulher no escuro"></a>
+            <div class="book-content">
+                <h2 class="book-title">O Corvo - HQ Versão Definitiva</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    "Victoria Bravo tinha quatro anos quando um homem invadiu sua casa e matou sua família a facadas, pichando seus rostos com tinta preta. Única sobrevivente, ela agora é uma jovem solitária e tímida, com pesadelos frequentes e sérias dificuldades para se relacionar. Seu refúgio é ficar em casa e observar a vida alheia pelas janelas do apartamento onde mora, na Lapa, Rio de Janeiro.
+                    <div id="aparecer2" style="display: none;" > Mas o passado bate à sua porta, e ela não sabe mais em quem pode confiar. Obrigada a enfrentar sua própria tragédia, Victoria embarca em uma jornada de amadurecimento e descoberta que a levará a zonas obscuras, mas também revelará as possibilidades do amor. Um psiquiatra, um amigo feito pela internet e um possível namorado ― qual dos três homens está usando tudo o que sabe para aterrorizar a vida de Vic? E o que afinal ele quer com ela?</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao2()'>Ler mais</button>
+                <div class="rating-container">
+                  <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+                    <button class="star" data-value="1" aria-label="1 estrela">★</button>
+                    <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+                    <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+                    <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+                    <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+                  </div>
+                  <p class="rating-text">
+                    Média: <span class="average-rating">0.0</span> de 5 
+                    (<span class="total-ratings">0</span> avaliações)
+                  </p>
+                </div>
+          </div>
+        </div>
+   
+        <!-- Terceiro livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Jantar-secreto-Raphael-Montes/dp/8535928359"><img src="../img/Jantar Secreto.webp" alt="Capa do liro Jantar Secreto"></a>
+            <div class="book-content">
+                <h2 class="book-title">Jantar Secreto</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    Um grupo de jovens deixa uma pequena cidade no Paraná para viver no Rio de Janeiro. Eles alugam um apartamento em Copacabana e fazem o possível para pagar a faculdade e manter vivos seus sonhos de sucesso na capital fluminense. Mas o dinheiro está curto e o aluguel está vencido. Para sair do buraco e manter o apartamento, os amigos adotam uma estratégia heterodoxa: arrecadar fundos por meio de jantares secretos, 
+                    divulgados pela internet para uma clientela exclusiva da elite carioca.
+                    <div id="aparecer3" style="display: none;">A partir daí, eles se envolvem em uma espiral de crimes, descobrem uma rede de contrabando de corpos, matadouros clandestinos e grã-finos excêntricos, e levam ao limite uma índole perversa que jamais imaginaram existir em cada um deles.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao3()'>Ler mais</button>
+                <div class="rating-container">
+                  <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+                    <button class="star" data-value="1" aria-label="1 estrela">★</button>
+                    <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+                    <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+                    <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+                    <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+                  </div>
+                  <p class="rating-text">
+                    Média: <span class="average-rating">0.0</span> de 5 
+                    (<span class="total-ratings">0</span> avaliações)
+                  </p>
+                </div>
+            </div>
+        </div>
+   
+        <!-- Quarto livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Dias-perfeitos-Raphael-Montes/dp/8535924019"><img src="../img/dias_perfeitos.jpg" alt="Capa do livro Dias perfeitos"></a>
+            <div class="book-content">  
+                <h2 class="book-title">Dias Perfeitos</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    Aos 20 anos, o carioca Raphael Montes impressionou crítica e público com Suicidas, um caudaloso romance policial que lhe garantiu vaga entre os dez finalistas do prêmio São Paulo de Literatura na categoria autor estreante. Após ler seu primeiro livro, Scott Turow, um dos autores policiais de maior prestígio no mundo, disse que Raphael está “entre os mais brilhantes ficcionistas jovens” da atualidade. 
+                    <div id="aparecer4" style="display: none;">Ele certamente redefinirá a literatura policial brasileira e vai surgir como uma figura da cena literária mundial.” Agora, aos 23 anos, ele lança seu segundo livro, Dias perfeitos, romance que confirma seu talento e certamente vai expandir sua já considerável cota de fãs.
+                O protagonista do livro é Téo, um jovem e solitário estudante de medicina que divide seu tempo entre cuidar da mãe paraplégica e dissecar cadáveres nas aulas de anatomia.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao4()'>Ler mais</button>
+                <div class="rating-container">
+                  <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+                    <button class="star" data-value="1" aria-label="1 estrela">★</button>
+                    <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+                    <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+                    <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+                    <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+                  </div>
+                  <p class="rating-text">
+                    Média: <span class="average-rating">0.0</span> de 5 
+                    (<span class="total-ratings">0</span> avaliações)
+                  </p>
+                </div>
+            </div>
+        </div>
+   
+        <!-- Quinto livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/Pedra-Papel-Tesoura-Alice-Feeney/dp/6555983574"><img src="../img/pedra_papel_tesoura.jpg" alt="Capa do livro x"></a>
+            <div class="book-content">
+                <h2 class="book-title">Pedra Papel Tesoura</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                   Há muito tempo as coisas andam erradas entre o sr. e a sra. Wright. O marido e roteirista Adam Wright é confessadamente um workaholic, e não consegue dar quase nenhuma atenção a tudo e a todos ao seu redor. Adam e Amelia estão casados há uma década, mas a paixão que um dia os uniu deu lugar a uma relação repleta de ressentimentos e brigas constantes.
+                    <div id="aparecer5" style="display: none;">Determinados a dar uma última chance ao casamento, eles decidem passar um fim de semana romântico em um lugar aconchegante, bucólico e nada comum. No entanto, o que seria um retiro de reencontro se transforma em uma tempestade de neve onde perdemos a visibilidade diante de um jogo de ressentimentos, segredos e obsessão. Prepare-se para uma leitura eletrizante, onde nada é o que parece ser.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao5()'>Ler mais</button>
+                <div class="rating-container">
+                  <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+                    <button class="star" data-value="1" aria-label="1 estrela">★</button>
+                    <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+                    <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+                    <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+                    <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+                  </div>
+                  <p class="rating-text">
+                    Média: <span class="average-rating">0.0</span> de 5 
+                    (<span class="total-ratings">0</span> avaliações)
+                  </p>
+                </div>
+            </div>
+        </div>
+   
+        <!-- Sexto livro -->
+        <div class="book">
+            <a href="https://www.amazon.com.br/vilarejo-Raphael-Montes/dp/8581053041"><img src="../img/vilarejo.jpg" alt="Capa do livro y"></a>
+            <div class="book-content">
+                <h2 class="book-title">O Vilarejo</h2>
+                <p class="book-description">
+                    <h4>SINOPSE:</h4>
+                    Em 1589, o padre e demonologista Peter Binsfeld fez a ligação de cada um dos pecados capitais a um demônio, supostamente responsável por invocar o mal nas pessoas. É a partir daí que Raphael Montes cria sete histórias situadas em um vilarejo isolado, apresentando a lenta degradação dos moradores do lugar, e pouco a pouco o próprio vilarejo vai sendo dizimado, maculado pela neve e pela fome.
+                    <div id="aparecer6"style="display: none;">As histórias podem ser lidas em qualquer ordem, sem prejuízo de sua compreensão, mas se relacionam de maneira complexa, de modo que ao término da leitura as narrativas convergem para uma única e surpreendente conclusão.</div>
+                </p>
+                <button class="read-more" onclick='minhafuncao6()'>Ler mais</button>
+                <div class="rating-container">
+                  <div class="stars" role="radiogroup" aria-label="Avaliação por estrelas">
+                    <button class="star" data-value="1" aria-label="1 estrela">★</button>
+                    <button class="star" data-value="2" aria-label="2 estrelas">★</button>
+                    <button class="star" data-value="3" aria-label="3 estrelas">★</button>
+                    <button class="star" data-value="4" aria-label="4 estrelas">★</button>
+                    <button class="star" data-value="5" aria-label="5 estrelas">★</button>
+                  </div>
+                  <p class="rating-text">
+                    Média: <span class="average-rating">0.0</span> de 5 
+                    (<span class="total-ratings">0</span> avaliações)
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+   <footer class="site-footer">
+        <p>© 2025 Mundo Entre Linhas. Todos os direitos reservados.</p>
+        <p>Criado com paixão por literatura.</p>
+   </footer>
+   
+   <a href="#" id="back-to-top-btn" title="Voltar ao topo">&uarr;</a>
+
+   <script src="livros.js"></script>
+
+</body>
+</html>
