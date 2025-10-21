@@ -409,12 +409,12 @@ div p {
         .site-header h1 {
             font-size: 1.8rem;
         }
-    }
-
-    .slider-content img {
+        .slider-content img {
         height: 230px;
     }
+    }
 
+    
     /* ---- SEÇÃO DE CONTEÚDO PRINCIPAL (ATUALIZADO) ---- */
 
     @media (max-width: 480px){
