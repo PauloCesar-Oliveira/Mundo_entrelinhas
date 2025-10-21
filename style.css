@@ -39,7 +39,7 @@ header {
     background-color: #4A1859; /* Cor de fundo roxa. */
     border-bottom-left-radius: 10px; /* Arredonda o canto inferior esquerdo. */
     border-bottom-right-radius: 10px; /* Arredonda o canto inferior direito. */
-    color: white; /* Cor do texto. */
+    color: rgb(122, 57, 57); /* Cor do texto. */
     display: flex; /* Habilita o layout flexbox para alinhar os itens. */
     align-items: center; /* Alinha os itens verticalmente ao centro. */
     justify-content: space-between; /* Distribui o espaço entre os itens. */
