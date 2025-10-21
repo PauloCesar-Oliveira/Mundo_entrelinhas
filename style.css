@@ -25,7 +25,7 @@ body {
     font-family: 'Akshar', sans-serif; /* Define a fonte principal da página. */
     margin: 0; /* Remove a margem padrão. */
     padding: 0; /* Remove o preenchimento padrão. */
-    background: linear-gradient( to right, #1e0036, #6f6088, #1e0036); /* Define um fundo com gradiente de cores. */
+    background: linear-gradient( to right, #1e0036, #c0a0f7, #1e0036); /* Define um fundo com gradiente de cores. */
     color: #333; /* Define a cor do texto padrão. */
     overflow-x: hidden; /* Esconde qualquer conteúdo que transborde horizontalmente. */
 
