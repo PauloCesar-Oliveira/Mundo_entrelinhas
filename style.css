@@ -340,110 +340,290 @@ div p {
     visibility: visible;
 }
 
-/* ================== AJUSTES PARA CELULARES ================== */
-@media (max-width: 480px) {
+/* RESPONSIVIDADE */
+/* @media aplica estilos apenas quando a condição (tamanho da tela) é atendida. */
 
-    /* Evita que qualquer elemento estoure a tela */
-    body {
-        overflow-x: hidden;
-    }
+/* Para tablets e telas menores (até 768px) */
+@media (max-width: 1024px) {
 
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 10px;
-        height: auto;
-    }
+     body{
+    overflow-x: hidden;
+  }
 
     .header-content {
         flex-direction: column;
+        gap: 15px;
+    }
+    .cabecalho {
+        margin: 0;
+        gap: 40px;
+        font-size: 1.2em;
+        flex-wrap: wrap;
+    }
+    
+
+    .main-nav ul {
+        flex-direction: column; /* Menu vira uma coluna */
         gap: 10px;
-        align-items: center;
     }
 
+    .banner h2 {
+        font-size: 2.5rem;
+    }
+
+    .recipe-container {
+        flex-direction: column; /* Receitas ficam uma abaixo da outra */
+    }
+    .slider-content img {
+        height: 300px;
+    }
+}
+
+/* Para celulares (até 480px) */
+@media (max-width: 480px) {
+
+    header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 15px;
+    }
     .cabecalho {
         flex-direction: column;
-        gap: 15px;
         margin: 0;
-        font-size: 1em;
+        gap: 20px;
+        font-size: 1.1em;
         text-align: center;
     }
 
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .content-section {
+        padding: 1.5rem;
+    }
+
+        .site-header h1 {
+            font-size: 1.8rem;
+        }
+        .slider-content img {
+        height: 230px;
+    }
+    }
+
+    
+    /* ---- SEÇÃO DE CONTEÚDO PRINCIPAL (ATUALIZADO) ---- */
+
+    @media (max-width: 480px){
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .cabecalho {
+        flex-direction: column;
+        font-size: 1em;
+        gap: 15px;
+        margin: 0;
+    }
     .logo {
-        height: 60px;
-        max-width: 100%;
-    }
+        height: 70px;}
 
-    /* Slider / Carrossel */
-    .slider-content {
-        width: 100%;
-        overflow: hidden;
-    }
+.container {
+    padding: 20px 60px;
+}}
 
-    .slide-box img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+.section-title {
+    color: var(--cor-principal);
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px var(--cor-secundaria);
+}
 
-    /* Container principal */
+.section-subtitle {
+    text-align: center;
+    color: #333;
+    font-size: 1.2em;
+    margin-top: -15px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---- SEÇÃO "COMO FUNCIONA" (LAYOUT CORRIGIDO E REFINADO) ---- */
+.how-it-works {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 40px 50px; /* Aumenta o espaçamento interno geral */
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border: 2px solid var(--cor-secundaria);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.how-it-works .section-title {
+    margin-bottom: 10px;
+}
+
+.how-it-works .section-subtitle {
+    margin-bottom: 50px; /* Mais espaço entre o subtítulo e os cards */
+}
+
+/* O container que alinha os 4 passos */
+.steps-container {
+    display: flex;
+    /* PONTO CRÍTICO: Alinha todos os cards no topo, resolvendo o desalinhamento vertical */
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px; /* Aumenta o espaço entre os cards para um melhor respiro */
+}
+
+/* Estilo de cada card de passo */
+.step {
+    flex: 1; /* Garante que os cards dividam o espaço igualmente */
+    /* PONTO CRÍTICO: Centraliza todo o conteúdo (título, texto, imagem) para um visual limpo */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step h3 {
+    color: var(--cor-principal);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    /* Garante que os títulos fiquem bem alinhados mesmo se tiverem tamanhos diferentes */
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo do texto descritivo */
+.step p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    text-shadow: none;
+    /* Força o alinhamento centralizado para um bloco de texto mais coeso */
+    text-align: center;
+}
+
+/* Estilo para a imagem que você adicionou */
+.step img {
+    max-width: 100%; /* A imagem se ajustará à largura do card */
+    height: auto;
+    margin-top: 20px; /* Adiciona um espaço consistente acima da imagem */
+}
+
+/* Seção de Formulário de Contato */
+.contact-section {
+    background-color: var(--cor-principal);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid var(--cor-secundaria);
+}
+
+.contact-section .section-title {
+    color: var(--cor-branco);
+    text-shadow: 1px 1px #000;
+}
+
+.contact-section .section-subtitle {
+    color: #dbc7fd;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    color: var(--cor-branco);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    font-family: 'Akshar', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 8px rgba(255, 161, 0, 0.5);
+}
+
+.submit-btn {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #ffb940; /* Um tom mais claro do laranja */
+    transform: translateY(-3px);
+}
+
+
+/* ---- AJUSTES DE RESPONSIVIDADE ---- */
+
+/* Atualize suas media queries existentes com estas regras */
+
+@media (max-width: 768px) {
     .container {
-        padding: 15px 20px;
-    }
-
-    /* Seção How It Works */
-    .how-it-works {
         padding: 20px;
-        margin-bottom: 20px;
     }
 
     .steps-container {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: column; /* Coloca os passos um abaixo do outro em telas menores */
     }
 
-    .step {
-        text-align: center;
-        width: 100%;
-    }
-
-    .step h3 {
-        font-size: 1.4em;
-    }
-
-    .step p {
-        font-size: 1em;
-    }
-
-    .step img {
-        max-width: 80%;
-        margin-top: 15px;
-    }
-
-    /* Contato */
-    .contact-section {
-        padding: 20px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 0.95em;
-        padding: 10px;
-    }
-
-    .submit-btn {
-        font-size: 1em;
-        padding: 12px;
-    }
-
-    /* Footer */
-    .site-footer {
-        font-size: 0.9em;
-        text-align: center;
-        padding: 10px 15px;
+    body {
+        font-size: 16px;
+        overflow-x: hidden;
     }
 }
+
 /* ---- ESTILO DA MENSAGEM DE SUCESSO DO FORMULÁRIO ---- */
 
 #success-message {
