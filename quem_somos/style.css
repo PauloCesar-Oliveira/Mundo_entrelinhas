@@ -320,6 +320,11 @@ team-section {
 
 /* Tablets e telas médias (até 1024px) */
 @media (max-width: 1024px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
   header {
     flex-direction: column;
     height: auto;
@@ -355,6 +360,10 @@ team-section {
 
 /* Celulares grandes e telas pequenas (até 768px) */
 @media (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
+
   header h1 {
     font-size: 1.8em;
   }
@@ -409,6 +418,11 @@ team-section {
 
 /* Celulares pequenos (até 480px) */
 @media (max-width: 480px) {
+
+  body{
+    overflow-x: hidden;
+  }
+  
   header h1 {
     font-size: 1.4em;
   }
