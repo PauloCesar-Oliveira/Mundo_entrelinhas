@@ -206,3 +206,15 @@ searchInput.addEventListener("keyup", () => {
     }
   });
 });
+
+// --- FUNÇÃO LER MAIS/LER MENOS ---
+function toggleSinopse(elementId, buttonElement) {
+    var x = document.getElementById(elementId);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      buttonElement.textContent = "Ler menos"; // Muda o texto
+    } else {
+      x.style.display = "none";
+      buttonElement.textContent = "Ler mais"; // Volta o texto
+    }
+}
